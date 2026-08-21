@@ -4,6 +4,8 @@ import {
 } from "lucide-react";
 import { NAVY, GOLD, LIGHT, BORDER, SectionLabel, SectionHeading, Btn } from "../components/site/shared";
 import type { Page } from "../components/site/Navbar";
+import ReviewsPage from "./ReviewsPage";
+import FaqsPage from "./FaqsPage";
 
 const services = [
   { icon: <BarChart3 size={20} />, title: "Financial Reporting", desc: "Bookkeeping, reconciliations, management accounts and annual financial statements." },
@@ -235,6 +237,9 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
           </div>
         </div>
       </section>
+
+      <ReviewsPage navigate={navigate} />
+      <FaqsPage navigate={navigate} />
     </div>
   );
 }

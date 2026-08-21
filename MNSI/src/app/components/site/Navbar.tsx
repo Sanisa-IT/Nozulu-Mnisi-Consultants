@@ -1,21 +1,23 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { NAVY, GOLD, BORDER } from "./shared";
 
 type Page =
   | "home" | "about" | "services" | "journey"
   | "who-we-serve" | "insights" | "reviews" | "faqs" | "contact";
 
-const links: { label: string; page: Page }[] = [
-  { label: "Home",         page: "home" },
-  { label: "About Us",     page: "about" },
-  { label: "Services",     page: "services" },
-  { label: "Our Journey",  page: "journey" },
+const mainLinks: { label: string; page: Page }[] = [
+  { label: "Home", page: "home" },
+  { label: "About", page: "about" },
+  { label: "Services", page: "services" },
   { label: "Who We Serve", page: "who-we-serve" },
-  { label: "Insights",     page: "insights" },
-  { label: "Reviews",      page: "reviews" },
-  { label: "FAQs",         page: "faqs" },
-  { label: "Contact",      page: "contact" },
+  { label: "Contact", page: "contact" },
+];
+
+const aboutLinks: { label: string; page: Page }[] = [
+  { label: "About Us", page: "about" },
+  { label: "Our Journey", page: "journey" },
+  { label: "Insights", page: "insights" },
 ];
 
 export default function Navbar({
@@ -26,8 +28,10 @@ export default function Navbar({
   navigate: (p: Page) => void;
 }) {
   const [open, setOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
 
-  const go = (p: Page) => { navigate(p); setOpen(false); window.scrollTo(0, 0); };
+  const go = (p: Page) => { navigate(p); setOpen(false); setAboutOpen(false); window.scrollTo(0, 0); };
+  const isAboutActive = current === "about" || current === "journey" || current === "insights";
 
   return (
     <nav className="bg-white border-b sticky top-0 z-50 shadow-sm" style={{ borderColor: BORDER }}>
@@ -55,20 +59,68 @@ export default function Navbar({
 
         {/* Desktop nav */}
         <div className="hidden lg:flex items-center gap-1">
-          {links.map(({ label, page }) => (
-            <button
-              key={page}
-              onClick={() => go(page)}
-              className="px-3 py-2 text-xs font-semibold rounded transition-colors"
-              style={{
-                color: current === page ? GOLD : NAVY,
-                background: current === page ? GOLD + "12" : "transparent",
-                fontFamily: "'Montserrat', sans-serif",
-              }}
-            >
-              {label}
-            </button>
-          ))}
+          {mainLinks.map(({ label, page }) => {
+            if (page === "about") {
+              return (
+                <div
+                  key={page}
+                  className="relative"
+                  onMouseEnter={() => setAboutOpen(true)}
+                  onMouseLeave={() => setAboutOpen(false)}
+                >
+                  <button
+                    onClick={() => {
+                      if (current !== "about") navigate("about");
+                      setAboutOpen((prev) => !prev);
+                    }}
+                    className="flex items-center gap-1 px-3 py-2 text-xs font-semibold rounded transition-colors"
+                    style={{
+                      color: isAboutActive ? GOLD : NAVY,
+                      background: isAboutActive ? GOLD + "12" : "transparent",
+                      fontFamily: "'Montserrat', sans-serif",
+                    }}
+                  >
+                    {label}
+                    <ChevronDown size={14} />
+                  </button>
+
+                  {aboutOpen && (
+                    <div className="absolute left-0 top-full mt-2 w-44 rounded-lg border bg-white shadow-lg py-2" style={{ borderColor: BORDER }}>
+                      {aboutLinks.map(({ label: childLabel, page: childPage }) => (
+                        <button
+                          key={childPage}
+                          onClick={() => go(childPage)}
+                          className="block w-full text-left px-3 py-2 text-xs font-semibold transition-colors"
+                          style={{
+                            color: current === childPage ? GOLD : NAVY,
+                            background: current === childPage ? GOLD + "12" : "transparent",
+                            fontFamily: "'Montserrat', sans-serif",
+                          }}
+                        >
+                          {childLabel}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            }
+
+            return (
+              <button
+                key={page}
+                onClick={() => go(page)}
+                className="px-3 py-2 text-xs font-semibold rounded transition-colors"
+                style={{
+                  color: current === page ? GOLD : NAVY,
+                  background: current === page ? GOLD + "12" : "transparent",
+                  fontFamily: "'Montserrat', sans-serif",
+                }}
+              >
+                {label}
+              </button>
+            );
+          })}
         </div>
 
         <button
@@ -89,19 +141,57 @@ export default function Navbar({
       {open && (
         <div className="lg:hidden bg-white border-t px-5 py-4" style={{ borderColor: BORDER }}>
           <div className="space-y-1 mb-4">
-            {links.map(({ label, page }) => (
-              <button
-                key={page}
-                onClick={() => go(page)}
-                className="block w-full text-left px-3 py-2.5 rounded text-sm font-semibold transition-colors"
-                style={{
-                  color: current === page ? GOLD : NAVY,
-                  background: current === page ? GOLD + "12" : "transparent",
-                }}
-              >
-                {label}
-              </button>
-            ))}
+            {mainLinks.map(({ label, page }) => {
+              if (page === "about") {
+                return (
+                  <div key={page} className="rounded border" style={{ borderColor: BORDER }}>
+                    <button
+                      onClick={() => {
+                        setAboutOpen((prev) => !prev);
+                        if (current !== "about") navigate("about");
+                      }}
+                      className="flex w-full items-center justify-between px-3 py-2.5 text-left text-sm font-semibold"
+                      style={{ color: isAboutActive ? GOLD : NAVY }}
+                    >
+                      <span>{label}</span>
+                      <ChevronDown size={14} />
+                    </button>
+
+                    {aboutOpen && (
+                      <div className="border-t px-3 py-2" style={{ borderColor: BORDER }}>
+                        {aboutLinks.map(({ label: childLabel, page: childPage }) => (
+                          <button
+                            key={childPage}
+                            onClick={() => go(childPage)}
+                            className="block w-full text-left px-3 py-2 text-sm font-medium"
+                            style={{
+                              color: current === childPage ? GOLD : NAVY,
+                              background: current === childPage ? GOLD + "12" : "transparent",
+                            }}
+                          >
+                            {childLabel}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
+                <button
+                  key={page}
+                  onClick={() => go(page)}
+                  className="block w-full text-left px-3 py-2.5 rounded text-sm font-semibold transition-colors"
+                  style={{
+                    color: current === page ? GOLD : NAVY,
+                    background: current === page ? GOLD + "12" : "transparent",
+                  }}
+                >
+                  {label}
+                </button>
+              );
+            })}
           </div>
           <button
             onClick={() => go("contact")}
