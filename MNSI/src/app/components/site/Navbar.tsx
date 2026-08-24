@@ -85,21 +85,23 @@ export default function Navbar({
                   </button>
 
                   {aboutOpen && (
-                    <div className="absolute left-0 top-full mt-2 w-44 rounded-lg border bg-white shadow-lg py-2" style={{ borderColor: BORDER }}>
-                      {aboutLinks.map(({ label: childLabel, page: childPage }) => (
-                        <button
-                          key={childPage}
-                          onClick={() => go(childPage)}
-                          className="block w-full text-left px-3 py-2 text-xs font-semibold transition-colors"
-                          style={{
-                            color: current === childPage ? GOLD : NAVY,
-                            background: current === childPage ? GOLD + "12" : "transparent",
-                            fontFamily: "'Montserrat', sans-serif",
-                          }}
-                        >
-                          {childLabel}
-                        </button>
-                      ))}
+                    <div className="absolute left-0 top-full w-44 pt-2">
+                      <div className="rounded-lg border bg-white shadow-lg py-2" style={{ borderColor: BORDER }}>
+                        {aboutLinks.map(({ label: childLabel, page: childPage }) => (
+                          <button
+                            key={childPage}
+                            onClick={() => go(childPage)}
+                            className="block w-full text-left px-3 py-2 text-xs font-semibold transition-colors"
+                            style={{
+                              color: current === childPage ? GOLD : NAVY,
+                              background: current === childPage ? GOLD + "12" : "transparent",
+                              fontFamily: "'Montserrat', sans-serif",
+                            }}
+                          >
+                            {childLabel}
+                          </button>
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>

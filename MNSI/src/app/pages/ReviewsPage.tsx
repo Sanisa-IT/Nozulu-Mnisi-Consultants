@@ -129,24 +129,13 @@ export default function ReviewsPage({ navigate }: { navigate: (p: Page) => void 
             <Quote size={36} className="mx-auto mb-4 opacity-30 text-white" />
             <StarRow count={5} />
             <p className="text-white text-lg leading-relaxed my-6 italic" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-              "What sets Nozulu Mnisi apart is that they actually care about outcomes, not just outputs. They don't just file returns — they make sure we understand our position and have a plan."
+              "What sets Nozulu Mnisi apart is that they actually care about outcomes, not just outputs. They don't just file returns - they make sure we understand our position and have a plan."
             </p>
             <p className="font-black text-sm" style={{ color: GOLD }}>Business Owner · Johannesburg</p>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16" style={{ background: LIGHT }}>
-        <div className="max-w-3xl mx-auto px-5 text-center">
-          <SectionLabel>Ready to experience the difference?</SectionLabel>
-          <SectionHeading center>Join our growing client base.</SectionHeading>
-          <p className="text-gray-600 mb-8 text-sm">
-            Book a no-obligation consultation and discover how we can support your financial wellbeing.
-          </p>
-          <Btn onClick={() => navigate("contact")}>Book a Free Consultation <ArrowRight size={15} /></Btn>
-        </div>
-      </section>
     </div>
   );
 }

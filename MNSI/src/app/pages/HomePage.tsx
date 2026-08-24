@@ -54,21 +54,10 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
           <div className="hidden md:block">
             <div className="relative">
               <div
-                className="rounded-2xl p-8 border"
-                style={{ background: `linear-gradient(135deg, ${NAVY} 0%, #1a3a6b 100%)`, borderColor: NAVY }}
-              >
-                <p className="text-xs font-black tracking-[0.2em] uppercase mb-6" style={{ color: GOLD }}>
-                  Our Core Services
-                </p>
-                {services.map((s) => (
-                  <div key={s.title} className="flex items-center gap-3 mb-3 last:mb-0">
-                    <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style={{ background: "rgba(200,150,46,0.2)", color: GOLD }}>
-                      {s.icon}
-                    </div>
-                    <span className="text-sm font-semibold text-white">{s.title}</span>
-                  </div>
-                ))}
-              </div>
+                aria-label="Image placeholder"
+                className="w-full aspect-[4/3] rounded-2xl border bg-gray-100"
+                style={{ borderColor: BORDER }}
+              />
               {/* Floating badge */}
               <div className="absolute -bottom-5 -right-5 bg-white rounded-xl shadow-xl p-4 border" style={{ borderColor: BORDER }}>
                 <p className="text-2xl font-black" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>Level 1</p>
@@ -105,17 +94,10 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
       <section className="py-20" style={{ background: LIGHT }}>
         <div className="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-14 items-center">
           <div
-            className="aspect-[4/3] rounded-2xl flex flex-col items-center justify-center gap-4 border-2 border-dashed"
-            style={{ background: "#E8ECF5", borderColor: BORDER }}
-          >
-            <div className="grid grid-cols-3 gap-3 p-8 w-full">
-              {["Financial Reporting", "Taxation", "Payroll", "Statutory Compliance", "Advisory", "Finance Operations"].map((s, i) => (
-                <div key={s} className="aspect-square rounded-xl flex items-center justify-center text-center p-2" style={{ background: i % 2 === 0 ? NAVY : GOLD }}>
-                  <p className="text-[9px] font-bold text-white leading-tight">{s}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+            aria-label="Image placeholder"
+            className="w-full aspect-[4/3] rounded-2xl border bg-gray-100"
+            style={{ borderColor: BORDER }}
+          />
           <div>
             <SectionLabel>Who We Are</SectionLabel>
             <SectionHeading>Built for clarity, compliance and confident decisions.</SectionHeading>
