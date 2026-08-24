@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
+import { ChevronDown, ChevronUp, ArrowRight, Search } from "lucide-react";
 import { NAVY, GOLD, LIGHT, BORDER, SectionLabel, SectionHeading, Btn, PageHero } from "../components/site/shared";
 import type { Page } from "../components/site/Navbar";
 
@@ -106,7 +106,23 @@ const faqCategories = [
 
 export default function FaqsPage({ navigate }: { navigate: (p: Page) => void }) {
   const [openMap, setOpenMap] = useState<Record<string, boolean>>({});
+  const [query, setQuery] = useState("");
   const toggle = (key: string) => setOpenMap((prev) => ({ ...prev, [key]: !prev[key] }));
+
+  const flattenedFaqs = faqCategories.flatMap((cat) =>
+    cat.faqs.map((faq, i) => ({
+      ...faq,
+      category: cat.category,
+      key: `${cat.category}-${i}`,
+    }))
+  );
+
+  const filteredFaqs = query.trim()
+    ? flattenedFaqs.filter((faq) => {
+        const text = `${faq.category} ${faq.q} ${faq.a}`.toLowerCase();
+        return text.includes(query.trim().toLowerCase());
+      })
+    : flattenedFaqs.slice(0, 4);
 
   return (
     <div>
@@ -117,50 +133,59 @@ export default function FaqsPage({ navigate }: { navigate: (p: Page) => void }) 
       />
 
       <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-5 space-y-12">
-          {faqCategories.map((cat) => (
-            <div key={cat.category}>
-              <div className="flex items-center gap-3 mb-5">
-                <h2 className="text-lg font-black" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>
-                  {cat.category}
-                </h2>
-                <div className="flex-1 h-px" style={{ background: BORDER }} />
-              </div>
-              <div className="space-y-2">
-                {cat.faqs.map((faq, i) => {
-                  const key = `${cat.category}-${i}`;
-                  const isOpen = !!openMap[key];
-                  return (
-                    <div
-                      key={i}
-                      className="border rounded-xl overflow-hidden transition-all"
-                      style={{ borderColor: isOpen ? GOLD + "60" : BORDER }}
-                    >
-                      <button
-                        onClick={() => toggle(key)}
-                        className="w-full flex items-start justify-between px-5 py-4 text-left hover:bg-gray-50 transition-colors gap-4"
-                      >
-                        <span className="text-sm font-bold leading-snug" style={{ color: NAVY }}>{faq.q}</span>
-                        <span className="shrink-0 mt-0.5">
-                          {isOpen
-                            ? <ChevronUp size={16} style={{ color: GOLD }} />
-                            : <ChevronDown size={16} className="text-gray-400" />}
-                        </span>
-                      </button>
-                      {isOpen && (
-                        <div
-                          className="px-5 pb-5 text-sm text-gray-600 leading-relaxed border-t"
-                          style={{ borderColor: BORDER }}
-                        >
-                          <p className="pt-4">{faq.a}</p>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
+        <div className="max-w-4xl mx-auto px-5 space-y-8">
+          <div className="flex items-center gap-3 rounded-xl border px-4 py-3" style={{ borderColor: BORDER, background: LIGHT }}>
+            <Search size={16} style={{ color: GOLD }} />
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search FAQs..."
+              className="flex-1 bg-transparent text-sm outline-none placeholder:text-gray-400"
+              style={{ color: NAVY }}
+            />
+          </div>
+
+          {filteredFaqs.length === 0 ? (
+            <div className="rounded-xl border p-6 text-center" style={{ borderColor: BORDER }}>
+              <p className="text-sm font-semibold" style={{ color: NAVY }}>No FAQ matches your search.</p>
             </div>
-          ))}
+          ) : (
+            <div className="space-y-3">
+              {filteredFaqs.map((faq) => {
+                const isOpen = !!openMap[faq.key];
+                return (
+                  <div
+                    key={faq.key}
+                    className="border rounded-xl overflow-hidden transition-all"
+                    style={{ borderColor: isOpen ? GOLD + "60" : BORDER }}
+                  >
+                    <button
+                      onClick={() => toggle(faq.key)}
+                      className="w-full flex items-start justify-between px-5 py-4 text-left hover:bg-gray-50 transition-colors gap-4"
+                    >
+                      <div>
+                        <p className="text-[10px] font-black tracking-[0.15em] uppercase mb-2" style={{ color: GOLD }}>{faq.category}</p>
+                        <span className="text-sm font-bold leading-snug" style={{ color: NAVY }}>{faq.q}</span>
+                      </div>
+                      <span className="shrink-0 mt-0.5">
+                        {isOpen
+                          ? <ChevronUp size={16} style={{ color: GOLD }} />
+                          : <ChevronDown size={16} className="text-gray-400" />}
+                      </span>
+                    </button>
+                    {isOpen && (
+                      <div
+                        className="px-5 pb-5 text-sm text-gray-600 leading-relaxed border-t"
+                        style={{ borderColor: BORDER }}
+                      >
+                        <p className="pt-4">{faq.a}</p>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
       </section>
 
