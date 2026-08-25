@@ -1,7 +1,7 @@
 // Shared brand tokens and components used across all pages
 
-export const NAVY   = "#0B1F4B";
-export const GOLD   = "#C8962E";
+export const NAVY   = "#1EA4D9";
+export const GOLD   = "#98CA42";
 export const LIGHT  = "#F8F9FC";
 export const BORDER = "#E2E6EF";
 
