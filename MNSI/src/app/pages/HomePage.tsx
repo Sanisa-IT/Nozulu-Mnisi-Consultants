@@ -6,6 +6,7 @@ import { NAVY, GOLD, LIGHT, BORDER, SectionLabel, SectionHeading, Btn } from "..
 import type { Page } from "../components/site/Navbar";
 import ReviewsPage from "./ReviewsPage";
 import FaqsPage from "./FaqsPage";
+import heroImage from "../../imports/OIP (2).webp";
 
 const services = [
   { icon: <BarChart3 size={20} />, title: "Financial Reporting", desc: "Bookkeeping, reconciliations, management accounts and annual financial statements." },
@@ -53,9 +54,10 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
           {/* Hero visual */}
           <div className="hidden md:block">
             <div className="relative">
-              <div
-                aria-label="Image placeholder"
-                className="w-full aspect-[4/3] rounded-2xl border bg-gray-100"
+              <img
+                src={heroImage}
+                alt="Business team collaborating around a table"
+                className="w-full aspect-[4/3] rounded-2xl border object-cover"
                 style={{ borderColor: BORDER }}
               />
               {/* Floating badge */}
