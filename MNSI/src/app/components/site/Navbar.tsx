@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { NAVY, GOLD, BORDER } from "./shared";
+import { NAVY, GOLD, BORDER, BACKGROUND_BLUE, BACKGROUND_GREEN } from "./shared";
 
 type Page =
   | "home" | "about" | "services" | "journey"
-  | "who-we-serve" | "insights" | "reviews" | "faqs" | "contact";
+  | "who-we-serve" | "reviews" | "faqs" | "contact";
 
 const mainLinks: { label: string; page: Page }[] = [
   { label: "Home", page: "home" },
@@ -17,7 +17,6 @@ const mainLinks: { label: string; page: Page }[] = [
 const aboutLinks: { label: string; page: Page }[] = [
   { label: "About Us", page: "about" },
   { label: "Our Journey", page: "journey" },
-  { label: "Insights", page: "insights" },
 ];
 
 export default function Navbar({
@@ -31,7 +30,7 @@ export default function Navbar({
   const [aboutOpen, setAboutOpen] = useState(false);
 
   const go = (p: Page) => { navigate(p); setOpen(false); setAboutOpen(false); window.scrollTo(0, 0); };
-  const isAboutActive = current === "about" || current === "journey" || current === "insights";
+  const isAboutActive = current === "about" || current === "journey";
 
   return (
     <nav className="bg-white border-b sticky top-0 z-50 shadow-sm" style={{ borderColor: BORDER }}>
@@ -40,7 +39,7 @@ export default function Navbar({
         <button onClick={() => go("home")} className="flex items-center gap-3 shrink-0">
           <div
             className="w-10 h-10 rounded flex items-center justify-center text-white font-black text-sm"
-            style={{ background: NAVY }}
+            style={{ background: BACKGROUND_BLUE }}
           >
             NM
           </div>
@@ -51,7 +50,7 @@ export default function Navbar({
             <p className="text-sm font-black leading-none" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>
               CONSULTANTS
             </p>
-            <p className="text-[9px] tracking-widest text-gray-400 uppercase leading-none mt-0.5">
+            <p className="text-[9px] tracking-widest text-black uppercase leading-none mt-0.5">
               Accounting · Taxation · Advisory
             </p>
           </div>
@@ -76,7 +75,7 @@ export default function Navbar({
                     className="flex items-center gap-1 px-3 py-2 text-xs font-semibold rounded transition-colors"
                     style={{
                       color: isAboutActive ? GOLD : NAVY,
-                      background: isAboutActive ? GOLD + "12" : "transparent",
+                      background: isAboutActive ? BACKGROUND_GREEN + "12" : "transparent",
                       fontFamily: "'Montserrat', sans-serif",
                     }}
                   >
@@ -94,7 +93,7 @@ export default function Navbar({
                             className="block w-full text-left px-3 py-2 text-xs font-semibold transition-colors"
                             style={{
                               color: current === childPage ? GOLD : NAVY,
-                              background: current === childPage ? GOLD + "12" : "transparent",
+                              background: current === childPage ? BACKGROUND_GREEN + "12" : "transparent",
                               fontFamily: "'Montserrat', sans-serif",
                             }}
                           >
@@ -115,7 +114,7 @@ export default function Navbar({
                 className="px-3 py-2 text-xs font-semibold rounded transition-colors"
                 style={{
                   color: current === page ? GOLD : NAVY,
-                  background: current === page ? GOLD + "12" : "transparent",
+                  background: current === page ? BACKGROUND_GREEN + "12" : "transparent",
                   fontFamily: "'Montserrat', sans-serif",
                 }}
               >
@@ -168,7 +167,7 @@ export default function Navbar({
                             className="block w-full text-left px-3 py-2 text-sm font-medium"
                             style={{
                               color: current === childPage ? GOLD : NAVY,
-                              background: current === childPage ? GOLD + "12" : "transparent",
+                              background: current === childPage ? BACKGROUND_GREEN + "12" : "transparent",
                             }}
                           >
                             {childLabel}
@@ -187,7 +186,7 @@ export default function Navbar({
                   className="block w-full text-left px-3 py-2.5 rounded text-sm font-semibold transition-colors"
                   style={{
                     color: current === page ? GOLD : NAVY,
-                    background: current === page ? GOLD + "12" : "transparent",
+                    background: current === page ? BACKGROUND_GREEN + "12" : "transparent",
                   }}
                 >
                   {label}

@@ -8,7 +8,6 @@ const quickLinks: { label: string; page: Page }[] = [
   { label: "Services",     page: "services" },
   { label: "Our Journey",  page: "journey" },
   { label: "Who We Serve", page: "who-we-serve" },
-  { label: "Insights",     page: "insights" },
   { label: "Reviews",      page: "reviews" },
   { label: "FAQs",         page: "faqs" },
   { label: "Contact",      page: "contact" },

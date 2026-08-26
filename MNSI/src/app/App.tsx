@@ -6,7 +6,6 @@ import AboutPage      from "./pages/AboutPage";
 import ServicesPage   from "./pages/ServicesPage";
 import JourneyPage    from "./pages/JourneyPage";
 import WhoWeServePage from "./pages/WhoWeServePage";
-import InsightsPage   from "./pages/InsightsPage";
 import ReviewsPage    from "./pages/ReviewsPage";
 import FaqsPage       from "./pages/FaqsPage";
 import ContactPage    from "./pages/ContactPage";
@@ -28,7 +27,6 @@ export default function App() {
       {page === "services"     && <ServicesPage   navigate={navigate} />}
       {page === "journey"      && <JourneyPage    navigate={navigate} />}
       {page === "who-we-serve" && <WhoWeServePage navigate={navigate} />}
-      {page === "insights"     && <InsightsPage />}
       {page === "reviews"      && <ReviewsPage    navigate={navigate} />}
       {page === "faqs"         && <FaqsPage       navigate={navigate} />}
       {page === "contact"      && <ContactPage />}

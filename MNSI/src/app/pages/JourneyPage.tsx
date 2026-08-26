@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { NAVY, GOLD, LIGHT, BORDER, SectionLabel, SectionHeading, Btn, PageHero } from "../components/site/shared";
+import { NAVY, GOLD, LIGHT, BORDER, BACKGROUND_BLUE, BACKGROUND_GREEN, SectionLabel, SectionHeading, Btn, PageHero } from "../components/site/shared";
 import type { Page } from "../components/site/Navbar";
 
 const milestones = [
@@ -85,7 +85,7 @@ export default function JourneyPage({ navigate }: { navigate: (p: Page) => void 
             {/* Centre line */}
             <div
               className="absolute left-[18px] md:left-1/2 top-0 bottom-0 w-px"
-              style={{ background: `linear-gradient(to bottom, ${GOLD}, ${NAVY})`, transform: "translateX(-50%)" }}
+              style={{ background: `linear-gradient(to bottom, ${BACKGROUND_GREEN}, ${BACKGROUND_BLUE})`, transform: "translateX(-50%)" }}
             />
 
             <div className="space-y-10">
@@ -99,7 +99,7 @@ export default function JourneyPage({ navigate }: { navigate: (p: Page) => void 
                     <div
                       className="w-9 h-9 rounded-full border-2 flex items-center justify-center font-black text-[10px]"
                       style={{
-                        background: m.isFuture ? "transparent" : i === milestones.length - 2 ? GOLD : NAVY,
+                        background: m.isFuture ? "transparent" : NAVY,
                         borderColor: GOLD,
                         color: "white",
                         borderStyle: m.isFuture ? "dashed" : "solid",
@@ -115,16 +115,16 @@ export default function JourneyPage({ navigate }: { navigate: (p: Page) => void 
                       className="border rounded-xl p-6 hover:shadow-md transition-all"
                       style={{
                         borderColor: m.isFuture ? GOLD + "60" : BORDER,
-                        background: m.isFuture ? NAVY + "06" : "white",
+                        background: m.isFuture ? BACKGROUND_BLUE + "06" : "white",
                         borderStyle: m.isFuture ? "dashed" : "solid",
                       }}
                     >
                       <div className={`flex items-center gap-2 mb-2 ${i % 2 === 0 ? "md:justify-end" : ""}`}>
                         <span className="text-sm font-black" style={{ color: GOLD, fontFamily: "'Montserrat', sans-serif" }}>{m.year}</span>
-                        <span className="text-xs px-2 py-0.5 rounded-full font-semibold" style={{ background: GOLD + "18", color: GOLD }}>{m.label}</span>
+                        <span className="text-xs px-2 py-0.5 rounded-full font-semibold" style={{ background: BACKGROUND_GREEN + "18", color: GOLD }}>{m.label}</span>
                       </div>
                       <p className="text-sm font-bold mb-2" style={{ color: NAVY }}>{m.desc}</p>
-                      <p className="text-xs text-gray-500 leading-relaxed mb-3">{m.detail}</p>
+                      <p className="text-xs text-black leading-relaxed mb-3">{m.detail}</p>
                       <p className="text-xs font-bold" style={{ color: GOLD }}>● {m.highlight}</p>
                     </div>
                   </div>
@@ -154,7 +154,7 @@ export default function JourneyPage({ navigate }: { navigate: (p: Page) => void 
             ].map((s) => (
               <div key={s.label} className="bg-white border rounded-xl p-6 text-center" style={{ borderColor: BORDER }}>
                 <p className="text-3xl font-black mb-1" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>{s.value}</p>
-                <p className="text-xs text-gray-500">{s.label}</p>
+                <p className="text-xs text-black">{s.label}</p>
               </div>
             ))}
           </div>
@@ -164,7 +164,7 @@ export default function JourneyPage({ navigate }: { navigate: (p: Page) => void 
       {/* CTA */}
       <section
         className="py-16 relative overflow-hidden"
-        style={{ background: `linear-gradient(135deg, ${NAVY} 0%, #1a3a6b 100%)` }}
+        style={{ background: `linear-gradient(135deg, ${BACKGROUND_BLUE} 0%, #1a3a6b 100%)` }}
       >
         <div className="relative max-w-3xl mx-auto px-5 text-center">
           <p className="text-xs font-black tracking-[0.2em] uppercase mb-3" style={{ color: GOLD }}>Be Part of the Journey</p>

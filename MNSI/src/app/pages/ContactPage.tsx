@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, CheckCircle, ArrowRight } from "lucide-react";
-import { NAVY, GOLD, LIGHT, BORDER, SectionLabel, SectionHeading, PageHero } from "../components/site/shared";
+import { NAVY, GOLD, LIGHT, BORDER, BACKGROUND_BLUE, BACKGROUND_GREEN, SectionLabel, SectionHeading, PageHero } from "../components/site/shared";
 
 const offices = [
   {
@@ -61,19 +61,19 @@ export default function ContactPage() {
             <div key={o.name} className="border rounded-xl p-6 hover:shadow-md transition-all" style={{ borderColor: BORDER }}>
               <p className="text-xs font-black tracking-[0.2em] uppercase mb-4" style={{ color: GOLD }}>{o.name}</p>
               <div className="space-y-3">
-                <div className="flex items-start gap-3 text-sm text-gray-600">
+                <div className="flex items-start gap-3 text-sm text-black">
                   <MapPin size={15} className="shrink-0 mt-0.5" style={{ color: GOLD }} />
                   <div>{o.address.map((l) => <p key={l}>{l}</p>)}</div>
                 </div>
-                <div className="flex items-center gap-3 text-sm text-gray-600">
+                <div className="flex items-center gap-3 text-sm text-black">
                   <Phone size={15} style={{ color: GOLD }} />
                   <a href={`tel:${o.phone}`} className="hover:underline">{o.phone}</a>
                 </div>
-                <div className="flex items-center gap-3 text-sm text-gray-600">
+                <div className="flex items-center gap-3 text-sm text-black">
                   <Mail size={15} style={{ color: GOLD }} />
                   <a href={`mailto:${o.email}`} className="hover:underline">{o.email}</a>
                 </div>
-                <div className="flex items-center gap-3 text-sm text-gray-600">
+                <div className="flex items-center gap-3 text-sm text-black">
                   <Clock size={15} style={{ color: GOLD }} />
                   <span>{o.hours}</span>
                 </div>
@@ -90,7 +90,7 @@ export default function ContactPage() {
           <div className="lg:col-span-1">
             <SectionLabel>Get in Touch</SectionLabel>
             <SectionHeading>Book a Free Consultation</SectionHeading>
-            <p className="text-gray-600 text-sm leading-relaxed mb-6">
+            <p className="text-black text-sm leading-relaxed mb-6">
               There's no obligation and no pressure. We'll listen, ask the right questions, and give you an honest view of how we can help - and what it would cost.
             </p>
             <div className="space-y-4 mb-8">
@@ -103,13 +103,13 @@ export default function ContactPage() {
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
                   <CheckCircle size={16} style={{ color: GOLD }} />
-                  <span className="text-sm text-gray-600">{item}</span>
+                  <span className="text-sm text-black">{item}</span>
                 </div>
               ))}
             </div>
             <div
               className="rounded-xl p-5 border"
-              style={{ background: `linear-gradient(135deg, ${NAVY} 0%, #1a3a6b 100%)`, borderColor: NAVY }}
+              style={{ background: `linear-gradient(135deg, ${BACKGROUND_BLUE} 0%, #1a3a6b 100%)`, borderColor: NAVY }}
             >
               <p className="text-xs font-black tracking-widest uppercase mb-3" style={{ color: GOLD }}>Direct Contact</p>
               <div className="space-y-2.5">
@@ -130,12 +130,12 @@ export default function ContactPage() {
           <div className="lg:col-span-2">
             {submitted ? (
               <div className="bg-white border rounded-2xl p-12 flex flex-col items-center justify-center text-center h-full" style={{ borderColor: BORDER }}>
-                <div className="w-16 h-16 rounded-full flex items-center justify-center mb-5" style={{ background: GOLD + "18" }}>
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mb-5" style={{ background: BACKGROUND_GREEN + "18" }}>
                   <CheckCircle size={32} style={{ color: GOLD }} />
                 </div>
                 <h3 className="text-xl font-black mb-2" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>Message Received</h3>
-                <p className="text-gray-600 text-sm mb-2">Thank you for reaching out. A member of our team will be in touch within one business day.</p>
-                <p className="text-xs text-gray-400">If your matter is urgent, please call us directly on 011 568 7121 (Gauteng) or 031 100 0320 (KZN).</p>
+                <p className="text-black text-sm mb-2">Thank you for reaching out. A member of our team will be in touch within one business day.</p>
+                <p className="text-xs text-black">If your matter is urgent, please call us directly on 011 568 7121 (Gauteng) or 031 100 0320 (KZN).</p>
               </div>
             ) : (
               <div className="bg-white border rounded-2xl p-7" style={{ borderColor: BORDER }}>
@@ -154,7 +154,7 @@ export default function ContactPage() {
                           onClick={() => setForm({ ...form, office: o.value })}
                           className="flex-1 py-2.5 rounded-lg text-sm font-bold border-2 transition-all"
                           style={{
-                            background: form.office === o.value ? NAVY : "white",
+                            background: form.office === o.value ? BACKGROUND_BLUE : "white",
                             borderColor: form.office === o.value ? NAVY : BORDER,
                             color: form.office === o.value ? "white" : NAVY,
                           }}
@@ -245,7 +245,7 @@ export default function ContactPage() {
                   >
                     Send Message <ArrowRight size={16} />
                   </button>
-                  <p className="text-center text-xs text-gray-400">
+                  <p className="text-center text-xs text-black">
                     By submitting this form you agree to our Privacy Policy and POPIA obligations.
                   </p>
                 </form>

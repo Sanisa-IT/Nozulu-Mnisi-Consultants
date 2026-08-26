@@ -140,7 +140,7 @@ export default function FaqsPage({ navigate }: { navigate: (p: Page) => void }) 
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search FAQs..."
-              className="flex-1 bg-transparent text-sm outline-none placeholder:text-gray-400"
+              className="flex-1 bg-transparent text-sm outline-none placeholder:text-black"
               style={{ color: NAVY }}
             />
           </div>
@@ -170,12 +170,12 @@ export default function FaqsPage({ navigate }: { navigate: (p: Page) => void }) 
                       <span className="shrink-0 mt-0.5">
                         {isOpen
                           ? <ChevronUp size={16} style={{ color: GOLD }} />
-                          : <ChevronDown size={16} className="text-gray-400" />}
+                          : <ChevronDown size={16} className="text-black" />}
                       </span>
                     </button>
                     {isOpen && (
                       <div
-                        className="px-5 pb-5 text-sm text-gray-600 leading-relaxed border-t"
+                        className="px-5 pb-5 text-sm text-black leading-relaxed border-t"
                         style={{ borderColor: BORDER }}
                       >
                         <p className="pt-4">{faq.a}</p>
@@ -189,20 +189,6 @@ export default function FaqsPage({ navigate }: { navigate: (p: Page) => void }) 
         </div>
       </section>
 
-      {/* Still have questions */}
-      <section className="py-16" style={{ background: LIGHT }}>
-        <div className="max-w-3xl mx-auto px-5 text-center">
-          <SectionLabel>Still have a question?</SectionLabel>
-          <SectionHeading center>Let's talk.</SectionHeading>
-          <p className="text-gray-600 mb-8 text-sm leading-relaxed">
-            If your question isn't answered above, we'd be glad to discuss your specific situation directly. There's no obligation — just a straightforward conversation.
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Btn onClick={() => navigate("contact")}>Get in Touch <ArrowRight size={15} /></Btn>
-            <Btn variant="outline" onClick={() => navigate("services")}>View Our Services</Btn>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

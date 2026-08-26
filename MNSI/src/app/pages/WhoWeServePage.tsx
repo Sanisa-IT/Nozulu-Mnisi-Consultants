@@ -2,7 +2,7 @@ import {
   Building2, Briefcase, Globe, HeartHandshake,
   Factory, UserCog, CheckCircle, ArrowRight,
 } from "lucide-react";
-import { NAVY, GOLD, LIGHT, BORDER, SectionLabel, SectionHeading, Btn, PageHero } from "../components/site/shared";
+import { NAVY, GOLD, LIGHT, BORDER, BACKGROUND_BLUE, SectionLabel, SectionHeading, Btn, PageHero } from "../components/site/shared";
 import type { Page } from "../components/site/Navbar";
 
 const segments = [
@@ -70,7 +70,7 @@ export default function WhoWeServePage({ navigate }: { navigate: (p: Page) => vo
                 className="border rounded-xl p-4 text-center hover:shadow-md hover:border-current/30 transition-all group"
                 style={{ borderColor: BORDER }}
               >
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform" style={{ background: NAVY + "0d", color: NAVY }}>
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform" style={{ background: BACKGROUND_BLUE + "0d", color: NAVY }}>
                   {s.icon}
                 </div>
                 <p className="text-xs font-bold leading-snug" style={{ color: NAVY }}>{s.title}</p>
@@ -91,16 +91,16 @@ export default function WhoWeServePage({ navigate }: { navigate: (p: Page) => vo
               style={{ borderColor: BORDER }}
             >
               <div className={i % 2 === 1 ? "md:order-2" : ""}>
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style={{ background: NAVY + "0d", color: NAVY }}>
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style={{ background: BACKGROUND_BLUE + "0d", color: NAVY }}>
                   {s.icon}
                 </div>
                 <SectionLabel>Who We Serve</SectionLabel>
                 <h2 className="text-2xl md:text-3xl font-black mb-4 leading-tight" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>
                   {s.title}
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-6 text-sm">{s.desc}</p>
+                <p className="text-black leading-relaxed mb-6 text-sm">{s.desc}</p>
                 <blockquote
-                  className="border-l-4 pl-4 italic text-sm text-gray-600"
+                  className="border-l-4 pl-4 italic text-sm text-black"
                   style={{ borderColor: GOLD }}
                 >
                   "{s.quote}"
@@ -114,7 +114,7 @@ export default function WhoWeServePage({ navigate }: { navigate: (p: Page) => vo
                     {s.needs.map((need) => (
                       <li key={need} className="flex items-start gap-3">
                         <CheckCircle size={15} className="shrink-0 mt-0.5" style={{ color: GOLD }} />
-                        <span className="text-sm text-gray-600">{need}</span>
+                        <span className="text-sm text-black">{need}</span>
                       </li>
                     ))}
                   </ul>
@@ -135,7 +135,7 @@ export default function WhoWeServePage({ navigate }: { navigate: (p: Page) => vo
         <div className="max-w-3xl mx-auto px-5 text-center">
           <SectionLabel>Not sure if we're the right fit?</SectionLabel>
           <SectionHeading center>Let's have a conversation.</SectionHeading>
-          <p className="text-gray-600 mb-8 text-sm leading-relaxed">
+          <p className="text-black mb-8 text-sm leading-relaxed">
             We'll take the time to understand your situation and be honest about whether — and how — we can help. No obligation. No pressure.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">

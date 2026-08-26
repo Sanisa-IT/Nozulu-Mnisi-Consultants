@@ -2,7 +2,7 @@ import {
   BarChart3, Receipt, Users, ShieldCheck, Lightbulb,
   Briefcase, CheckCircle, ArrowRight,
 } from "lucide-react";
-import { NAVY, GOLD, LIGHT, BORDER, SectionLabel, SectionHeading, Btn, PageHero } from "../components/site/shared";
+import { NAVY, GOLD, LIGHT, BORDER, BACKGROUND_BLUE, SectionLabel, SectionHeading, Btn, PageHero } from "../components/site/shared";
 import type { Page } from "../components/site/Navbar";
 
 const services = [
@@ -139,7 +139,7 @@ export default function ServicesPage({ navigate }: { navigate: (p: Page) => void
               <div className={i % 2 === 1 ? "md:order-2" : ""}>
                 <div className="flex items-center gap-4 mb-5">
                   <span className="text-3xl font-black" style={{ color: GOLD, fontFamily: "'Montserrat', sans-serif" }}>{s.num}</span>
-                  <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: NAVY + "0d", color: NAVY }}>
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: BACKGROUND_BLUE + "0d", color: NAVY }}>
                     {s.icon}
                   </div>
                 </div>
@@ -147,10 +147,10 @@ export default function ServicesPage({ navigate }: { navigate: (p: Page) => void
                 <h2 className="text-2xl md:text-3xl font-black mb-4" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>
                   {s.title}
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-6 text-sm">{s.intro}</p>
+                <p className="text-black leading-relaxed mb-6 text-sm">{s.intro}</p>
                 <div className="rounded-xl p-4 text-sm" style={{ background: LIGHT, border: `1px solid ${BORDER}` }}>
                   <p className="text-xs font-black tracking-widest uppercase mb-2" style={{ color: GOLD }}>Who this is for</p>
-                  <p className="text-gray-600 text-sm">{s.who}</p>
+                  <p className="text-black text-sm">{s.who}</p>
                 </div>
               </div>
 
@@ -161,7 +161,7 @@ export default function ServicesPage({ navigate }: { navigate: (p: Page) => void
                     {s.items.map((item) => (
                       <li key={item} className="flex items-start gap-3">
                         <CheckCircle size={15} className="shrink-0 mt-0.5" style={{ color: GOLD }} />
-                        <span className="text-sm text-gray-600">{item}</span>
+                        <span className="text-sm text-black">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -177,7 +177,7 @@ export default function ServicesPage({ navigate }: { navigate: (p: Page) => void
         <div className="max-w-3xl mx-auto px-5 text-center">
           <SectionLabel>Get Started</SectionLabel>
           <SectionHeading center>Not sure which service you need?</SectionHeading>
-          <p className="text-gray-600 mb-8 text-sm leading-relaxed">
+          <p className="text-black mb-8 text-sm leading-relaxed">
             We'll help you identify exactly what's required based on your current position, obligations and goals. Book a no-obligation consultation and let's talk.
           </p>
           <Btn onClick={() => navigate("contact")}>Book a Free Consultation <ArrowRight size={15} /></Btn>
