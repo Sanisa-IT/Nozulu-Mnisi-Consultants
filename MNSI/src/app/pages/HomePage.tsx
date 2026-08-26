@@ -173,12 +173,12 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
       {/* ── Why us stats ── */}
       <section
         className="py-20 relative overflow-hidden"
-        style={{ background: `linear-gradient(135deg, ${BACKGROUND_BLUE} 0%, #1a3a6b 100%)`, order: 3 }}
+        style={{ background: NAVY, order: 3 }}
       >
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10" style={{ background: BACKGROUND_GREEN, transform: "translate(30%,-30%)" }} />
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10" style={{ background: "white", transform: "translate(30%,-30%)" }} />
         <div className="relative max-w-7xl mx-auto px-5">
           <div className="text-center mb-12">
-            <p className="text-xs font-black tracking-[0.2em] uppercase mb-3" style={{ color: GOLD }}>Why Choose Us</p>
+            <p className="text-xs font-black tracking-[0.2em] uppercase mb-3 text-white">Why Choose Us</p>
             <h2 className="text-3xl md:text-4xl font-black text-white" style={{ fontFamily: "'Montserrat', sans-serif" }}>
               The Value We Create
             </h2>
@@ -193,10 +193,10 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
               { title: "Senior Involvement",     desc: "Leadership remains close to the work and every client relationship." },
             ].map((v) => (
               <div key={v.title} className="rounded-xl p-5 flex items-start gap-3" style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)" }}>
-                <CheckCircle size={18} className="shrink-0 mt-0.5" style={{ color: GOLD }} />
+                <CheckCircle size={18} className="shrink-0 mt-0.5 text-white" />
                 <div>
                   <p className="font-black text-sm text-white mb-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>{v.title}</p>
-                  <p className="text-xs text-blue-200 leading-relaxed">{v.desc}</p>
+                  <p className="text-xs text-white leading-relaxed">{v.desc}</p>
                 </div>
               </div>
             ))}
@@ -205,7 +205,7 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
             <button
               onClick={() => navigate("contact")}
               className="font-black px-8 py-3.5 rounded text-white text-sm hover:opacity-90 transition-all border-2"
-              style={{ borderColor: GOLD, color: GOLD, fontFamily: "'Montserrat', sans-serif" }}
+              style={{ borderColor: "white", color: "white", fontFamily: "'Montserrat', sans-serif" }}
             >
               Book a Free Consultation
             </button>

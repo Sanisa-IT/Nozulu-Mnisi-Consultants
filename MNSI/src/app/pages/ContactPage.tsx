@@ -154,7 +154,7 @@ export default function ContactPage() {
                           onClick={() => setForm({ ...form, office: o.value })}
                           className="flex-1 py-2.5 rounded-lg text-sm font-bold border-2 transition-all"
                           style={{
-                            background: form.office === o.value ? BACKGROUND_BLUE : "white",
+                            background: form.office === o.value ? NAVY : "white",
                             borderColor: form.office === o.value ? NAVY : BORDER,
                             color: form.office === o.value ? "white" : NAVY,
                           }}
