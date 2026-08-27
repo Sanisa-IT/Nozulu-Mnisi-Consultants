@@ -1,11 +1,7 @@
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
-<<<<<<< HEAD
-import { NAVY, GOLD, BORDER } from "./shared";
-import companyLogo from "../../../imports/Screenshot 2026-08-27 110932.png";
-=======
 import { NAVY, GOLD, BORDER, BACKGROUND_BLUE, BACKGROUND_GREEN } from "./shared";
->>>>>>> 873c7d6a873f7f902618899929746d5e5643981b
+import companyLogo from "../../../imports/Screenshot 2026-08-27 110932.png";
 
 type Page =
   | "home" | "about" | "services" | "journey"
@@ -41,29 +37,8 @@ export default function Navbar({
     <nav className="bg-white border-b sticky top-0 z-50 shadow-sm" style={{ borderColor: BORDER }}>
       <div className="max-w-7xl mx-auto px-5 flex items-center justify-between h-16">
         {/* Logo */}
-<<<<<<< HEAD
         <button onClick={() => go("home")} className="shrink-0" aria-label="Go to home page">
           <img src={companyLogo} alt="Nozulu Mnisi Consultants" className="h-12 w-auto" />
-=======
-        <button onClick={() => go("home")} className="flex items-center gap-3 shrink-0">
-          <div
-            className="w-10 h-10 rounded flex items-center justify-center text-white font-black text-sm"
-            style={{ background: BACKGROUND_BLUE }}
-          >
-            NM
-          </div>
-          <div className="text-left">
-            <p className="text-sm font-black leading-none" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>
-              NOZULU MNISI
-            </p>
-            <p className="text-sm font-black leading-none" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>
-              CONSULTANTS
-            </p>
-            <p className="text-[9px] tracking-widest text-black uppercase leading-none mt-0.5">
-              Accounting · Taxation · Advisory
-            </p>
-          </div>
->>>>>>> 873c7d6a873f7f902618899929746d5e5643981b
         </button>
 
         {/* Desktop nav */}
