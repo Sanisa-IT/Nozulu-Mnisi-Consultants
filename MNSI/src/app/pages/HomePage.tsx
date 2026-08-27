@@ -2,11 +2,12 @@ import {
   ArrowRight, MapPin, BarChart3, Receipt, Users, ShieldCheck,
   Lightbulb, Briefcase, UserCircle, Globe, Star, CheckCircle,
 } from "lucide-react";
-import { NAVY, GOLD, LIGHT, BORDER, SectionLabel, SectionHeading, Btn } from "../components/site/shared";
+import { NAVY, GOLD, LIGHT, BORDER, BACKGROUND_BLUE, BACKGROUND_GREEN, SectionLabel, SectionHeading, Btn } from "../components/site/shared";
 import type { Page } from "../components/site/Navbar";
 import ReviewsPage from "./ReviewsPage";
 import FaqsPage from "./FaqsPage";
 import heroImage from "../../imports/OIP (2).webp";
+import aboutImage from "../../imports/pic.png";
 
 const services = [
   { icon: <BarChart3 size={20} />, title: "Financial Reporting", desc: "Bookkeeping, reconciliations, management accounts and annual financial statements." },
@@ -27,46 +28,35 @@ const steps = [
 
 export default function HomePage({ navigate }: { navigate: (p: Page) => void }) {
   return (
-    <div>
+    <div className="flex flex-col">
       {/* ── Hero ── */}
-      <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-5 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+      <section className="bg-white" style={{ order: 1 }}>
+        <div
+          className="relative overflow-hidden bg-cover bg-center"
+          style={{ backgroundImage: `linear-gradient(rgba(30, 164, 217, 0.86), rgba(30, 164, 217, 0.86)), url("${heroImage}")` }}
+        >
+        <div className="relative max-w-7xl mx-auto px-5 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1
               className="text-4xl md:text-5xl lg:text-[3.2rem] font-black leading-[1.1] mb-6 uppercase"
-              style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}
+              style={{ color: "#fff", fontFamily: "'Montserrat', sans-serif" }}
             >
               Your Partner in<br />Personal and<br />Business <span style={{ color: GOLD }}>Wellbeing.</span>
             </h1>
-            <p className="text-gray-600 text-base leading-relaxed mb-8 max-w-lg">
+            <p className="text-blue-50 text-base leading-relaxed mb-8 max-w-lg">
               Accounting, taxation and advisory support built around accurate information, disciplined compliance and practical insight.
             </p>
             <div className="flex flex-wrap gap-3 mb-8">
               <Btn onClick={() => navigate("contact")}>Let's Work Together</Btn>
               <Btn variant="outline" onClick={() => navigate("services")}>Explore Our Services</Btn>
             </div>
-            <div className="flex items-center gap-2 text-sm text-gray-500">
+            <div className="flex items-center gap-2 text-sm text-black">
               <MapPin size={15} style={{ color: GOLD }} />
-              <span>Gauteng | KwaZulu-Natal | South Africa</span>
+              <span className="text-blue-50">Gauteng | KwaZulu-Natal | South Africa</span>
             </div>
           </div>
 
-          {/* Hero visual */}
-          <div className="hidden md:block">
-            <div className="relative">
-              <img
-                src={heroImage}
-                alt="Business team collaborating around a table"
-                className="w-full aspect-[4/3] rounded-2xl border object-cover"
-                style={{ borderColor: BORDER }}
-              />
-              {/* Floating badge */}
-              <div className="absolute -bottom-5 -right-5 bg-white rounded-xl shadow-xl p-4 border" style={{ borderColor: BORDER }}>
-                <p className="text-2xl font-black" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>Level 1</p>
-                <p className="text-xs text-gray-500">B-BBEE Contributor</p>
-              </div>
-            </div>
-          </div>
+        </div>
         </div>
 
         {/* Trust pillars */}
@@ -79,12 +69,12 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
               { icon: <Star size={26} />,          title: "Level 1",      desc: "B-BBEE Contributor" },
             ].map((p) => (
               <div key={p.title} className="flex items-start gap-3">
-                <div className="w-11 h-11 rounded-lg flex items-center justify-center shrink-0" style={{ background: NAVY + "0f", color: GOLD }}>
+                <div className="w-11 h-11 rounded-lg flex items-center justify-center shrink-0" style={{ background: BACKGROUND_BLUE + "0f", color: GOLD }}>
                   {p.icon}
                 </div>
                 <div>
                   <p className="font-black text-sm" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>{p.title}</p>
-                  <p className="text-xs text-gray-500 mt-0.5">{p.desc}</p>
+                  <p className="text-xs text-black mt-0.5">{p.desc}</p>
                 </div>
               </div>
             ))}
@@ -93,20 +83,21 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
       </section>
 
       {/* ── About snippet ── */}
-      <section className="py-20" style={{ background: LIGHT }}>
+      <section className="py-20" style={{ background: LIGHT, order: 2 }}>
         <div className="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-14 items-center">
-          <div
-            aria-label="Image placeholder"
-            className="w-full aspect-[4/3] rounded-2xl border bg-gray-100"
+          <img
+            src={aboutImage}
+            alt="Business colleagues discussing work in an office"
+            className="w-full aspect-[4/3] rounded-2xl border object-cover"
             style={{ borderColor: BORDER }}
           />
           <div>
             <SectionLabel>Who We Are</SectionLabel>
             <SectionHeading>Built for clarity, compliance and confident decisions.</SectionHeading>
-            <p className="text-gray-600 leading-relaxed mb-4 text-sm">
+            <p className="text-black leading-relaxed mb-4 text-sm">
               Nozulu Mnisi Consultants is an accounting, taxation and advisory firm that combines technical discipline with active, senior-led client support.
             </p>
-            <p className="text-gray-600 leading-relaxed mb-7 text-sm">
+            <p className="text-black leading-relaxed mb-7 text-sm">
               We do more than complete submissions. We help clients build reliable records, meet regulatory obligations, understand performance and make better financial decisions.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -120,7 +111,7 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
       </section>
 
       {/* ── Services preview ── */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white" style={{ order: 4 }}>
         <div className="max-w-7xl mx-auto px-5">
           <div className="text-center mb-12">
             <SectionLabel>Our Services</SectionLabel>
@@ -136,14 +127,14 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
               >
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-xs font-black tracking-widest" style={{ color: GOLD }}>0{i + 1}</span>
-                  <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: NAVY + "0d", color: NAVY }}>
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: BACKGROUND_BLUE + "0d", color: NAVY }}>
                     {s.icon}
                   </div>
                 </div>
                 <h3 className="font-black text-sm mb-2 group-hover:text-amber-700 transition-colors" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>
                   {s.title}
                 </h3>
-                <p className="text-xs text-gray-500 leading-relaxed">{s.desc}</p>
+                <p className="text-xs text-black leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -154,7 +145,7 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
       </section>
 
       {/* ── Approach ── */}
-      <section className="py-20" style={{ background: LIGHT }}>
+      <section className="py-20" style={{ background: LIGHT, order: 5 }}>
         <div className="max-w-7xl mx-auto px-5">
           <div className="text-center mb-12">
             <SectionLabel>Our Approach</SectionLabel>
@@ -166,7 +157,7 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
                 <div className="border bg-white rounded-xl p-5 flex-1" style={{ borderColor: BORDER }}>
                   <span className="text-xs font-black tracking-widest mb-3 block" style={{ color: GOLD }}>{s.num}</span>
                   <h4 className="font-black text-sm mb-2" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>{s.title}</h4>
-                  <p className="text-xs text-gray-500 leading-relaxed">{s.desc}</p>
+                  <p className="text-xs text-black leading-relaxed">{s.desc}</p>
                 </div>
                 {i < steps.length - 1 && (
                   <div className="hidden md:flex items-center justify-center w-6 shrink-0 mt-8">
@@ -182,12 +173,12 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
       {/* ── Why us stats ── */}
       <section
         className="py-20 relative overflow-hidden"
-        style={{ background: `linear-gradient(135deg, ${NAVY} 0%, #1a3a6b 100%)` }}
+        style={{ background: NAVY, order: 3 }}
       >
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10" style={{ background: GOLD, transform: "translate(30%,-30%)" }} />
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10" style={{ background: "white", transform: "translate(30%,-30%)" }} />
         <div className="relative max-w-7xl mx-auto px-5">
           <div className="text-center mb-12">
-            <p className="text-xs font-black tracking-[0.2em] uppercase mb-3" style={{ color: GOLD }}>Why Choose Us</p>
+            <p className="text-xs font-black tracking-[0.2em] uppercase mb-3 text-white">Why Choose Us</p>
             <h2 className="text-3xl md:text-4xl font-black text-white" style={{ fontFamily: "'Montserrat', sans-serif" }}>
               The Value We Create
             </h2>
@@ -202,10 +193,10 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
               { title: "Senior Involvement",     desc: "Leadership remains close to the work and every client relationship." },
             ].map((v) => (
               <div key={v.title} className="rounded-xl p-5 flex items-start gap-3" style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)" }}>
-                <CheckCircle size={18} className="shrink-0 mt-0.5" style={{ color: GOLD }} />
+                <CheckCircle size={18} className="shrink-0 mt-0.5 text-white" />
                 <div>
                   <p className="font-black text-sm text-white mb-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>{v.title}</p>
-                  <p className="text-xs text-blue-200 leading-relaxed">{v.desc}</p>
+                  <p className="text-xs text-white leading-relaxed">{v.desc}</p>
                 </div>
               </div>
             ))}
@@ -214,7 +205,7 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
             <button
               onClick={() => navigate("contact")}
               className="font-black px-8 py-3.5 rounded text-white text-sm hover:opacity-90 transition-all border-2"
-              style={{ borderColor: GOLD, color: GOLD, fontFamily: "'Montserrat', sans-serif" }}
+              style={{ borderColor: "white", color: "white", fontFamily: "'Montserrat', sans-serif" }}
             >
               Book a Free Consultation
             </button>
@@ -222,8 +213,12 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
         </div>
       </section>
 
-      <ReviewsPage navigate={navigate} />
-      <FaqsPage navigate={navigate} />
+      <div style={{ order: 6 }}>
+        <ReviewsPage navigate={navigate} />
+      </div>
+      <div style={{ order: 7 }}>
+        <FaqsPage navigate={navigate} />
+      </div>
     </div>
   );
 }

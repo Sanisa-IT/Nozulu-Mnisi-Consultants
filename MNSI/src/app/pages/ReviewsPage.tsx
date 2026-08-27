@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Star, ArrowRight, Quote } from "lucide-react";
-import { NAVY, GOLD, LIGHT, BORDER, SectionLabel, SectionHeading, Btn, PageHero } from "../components/site/shared";
+import { NAVY, GOLD, LIGHT, BORDER, BACKGROUND_BLUE, BACKGROUND_GREEN, SectionLabel, SectionHeading, Btn, PageHero } from "../components/site/shared";
 import type { Page } from "../components/site/Navbar";
 
 const reviews = {
@@ -36,6 +36,20 @@ export default function ReviewsPage({ navigate }: { navigate: (p: Page) => void 
 
   return (
     <div>
+      <style>{`
+        @keyframes reviews-loop {
+          from { transform: translateX(0); }
+          to { transform: translateX(calc(-50% - 0.625rem)); }
+        }
+        .reviews-track {
+          width: max-content;
+          animation: reviews-loop 38s linear infinite;
+        }
+        .reviews-track:hover { animation-play-state: paused; }
+        @media (prefers-reduced-motion: reduce) {
+          .reviews-track { animation: none !important; }
+        }
+      `}</style>
       <PageHero
         label="Client Reviews"
         title={<>What Our <span style={{ color: GOLD }}>Clients Say.</span></>}
@@ -53,7 +67,7 @@ export default function ReviewsPage({ navigate }: { navigate: (p: Page) => void 
           ].map((s) => (
             <div key={s.label} className="text-center">
               <p className="text-3xl font-black" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>{s.value}</p>
-              <p className="text-xs text-gray-500 mt-1">{s.label}</p>
+              <p className="text-xs text-black mt-1">{s.label}</p>
             </div>
           ))}
         </div>
@@ -81,16 +95,17 @@ export default function ReviewsPage({ navigate }: { navigate: (p: Page) => void 
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {current.map((r) => (
+          <div className="overflow-hidden -mx-5 px-5">
+            <div className="reviews-track flex gap-5">
+            {[...current, ...current].map((r, index) => (
               <div
-                key={r.name}
-                className="bg-white border rounded-2xl p-6 hover:shadow-md transition-all flex flex-col"
+                key={`${r.name}-${index}`}
+                className="bg-white border rounded-2xl p-6 hover:shadow-md transition-all flex flex-col w-[min(82vw,360px)] shrink-0"
                 style={{ borderColor: BORDER }}
               >
                 <Quote size={28} className="mb-3 opacity-20" style={{ color: NAVY }} />
                 <StarRow count={r.stars} />
-                <p className="text-sm text-gray-600 leading-relaxed my-4 flex-1 italic">"{r.text}"</p>
+                <p className="text-sm text-black leading-relaxed my-4 flex-1 italic">"{r.text}"</p>
                 <div className="flex items-center gap-3 pt-4 border-t" style={{ borderColor: BORDER }}>
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-black shrink-0"
@@ -100,20 +115,21 @@ export default function ReviewsPage({ navigate }: { navigate: (p: Page) => void 
                   </div>
                   <div>
                     <p className="text-sm font-bold" style={{ color: NAVY }}>{r.name}</p>
-                    <p className="text-xs text-gray-400">{r.role}</p>
+                    <p className="text-xs text-black">{r.role}</p>
                     <div className="flex items-center gap-1 mt-0.5">
                       <div
                         className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-white font-black text-[8px]"
-                        style={{ background: "#4285F4" }}
+                        style={{ background: NAVY }}
                       >
                         G
                       </div>
-                      <span className="text-[10px] text-gray-400">Google Review</span>
+                      <span className="text-[10px] text-black">Google Review</span>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
+            </div>
           </div>
         </div>
       </section>
@@ -123,15 +139,15 @@ export default function ReviewsPage({ navigate }: { navigate: (p: Page) => void 
         <div className="max-w-3xl mx-auto px-5">
           <div
             className="rounded-2xl p-10 text-center relative overflow-hidden"
-            style={{ background: `linear-gradient(135deg, ${NAVY} 0%, #1a3a6b 100%)` }}
+            style={{ background: `linear-gradient(135deg, ${BACKGROUND_BLUE} 0%, #1a3a6b 100%)` }}
           >
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full opacity-10" style={{ background: GOLD, transform: "translate(30%,-30%)" }} />
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full opacity-10" style={{ background: BACKGROUND_GREEN, transform: "translate(30%,-30%)" }} />
             <Quote size={36} className="mx-auto mb-4 opacity-30 text-white" />
             <StarRow count={5} />
             <p className="text-white text-lg leading-relaxed my-6 italic" style={{ fontFamily: "'Montserrat', sans-serif" }}>
               "What sets Nozulu Mnisi apart is that they actually care about outcomes, not just outputs. They don't just file returns - they make sure we understand our position and have a plan."
             </p>
-            <p className="font-black text-sm" style={{ color: GOLD }}>Business Owner · Johannesburg</p>
+            <p className="font-black text-sm" style={{ color: GOLD }}>FOUNDER & CEO · Johannesburg</p>
           </div>
         </div>
       </section>

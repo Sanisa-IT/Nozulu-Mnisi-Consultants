@@ -1,7 +1,9 @@
 // Shared brand tokens and components used across all pages
 
-export const NAVY   = "#1EA4D9";
-export const GOLD   = "#98CA42";
+export const NAVY   = "#004aad";
+export const GOLD   = "#004aad";
+export const BACKGROUND_BLUE = "#1EA4D9";
+export const BACKGROUND_GREEN = "#98CA42";
 export const LIGHT  = "#F8F9FC";
 export const BORDER = "#E2E6EF";
 
@@ -47,7 +49,7 @@ export function Btn({
   const styles = {
     primary: { background: NAVY, color: "#fff" },
     outline: { border: `2px solid ${NAVY}`, color: NAVY, background: "transparent" },
-    gold:    { background: GOLD, color: "#fff" },
+    gold:    { background: NAVY, color: "#fff" },
   };
   return (
     <button
@@ -72,11 +74,11 @@ export function PageHero({
   return (
     <section
       className="py-20 md:py-28 relative overflow-hidden"
-      style={{ background: `linear-gradient(135deg, ${NAVY} 0%, #1a3a6b 100%)` }}
+      style={{ background: `linear-gradient(135deg, ${BACKGROUND_BLUE} 0%, #1a3a6b 100%)` }}
     >
       <div
         className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10 pointer-events-none"
-        style={{ background: GOLD, transform: "translate(30%,-30%)" }}
+        style={{ background: BACKGROUND_GREEN, transform: "translate(30%,-30%)" }}
       />
       <div className="relative max-w-4xl mx-auto px-5 text-center">
         <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: GOLD }}>

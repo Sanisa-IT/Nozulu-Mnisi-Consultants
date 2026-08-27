@@ -2,7 +2,7 @@ import {
   CheckCircle, ArrowRight, UserCircle, GraduationCap,
   Award, Target, HeartHandshake, Shield,
 } from "lucide-react";
-import { NAVY, GOLD, LIGHT, BORDER, SectionLabel, SectionHeading, Btn, PageHero } from "../components/site/shared";
+import { NAVY, GOLD, LIGHT, BORDER, BACKGROUND_BLUE, BACKGROUND_GREEN, SectionLabel, SectionHeading, Btn, PageHero } from "../components/site/shared";
 import type { Page } from "../components/site/Navbar";
 
 const values = [
@@ -44,13 +44,13 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
           <div>
             <SectionLabel>Our Purpose</SectionLabel>
             <SectionHeading>Why we exist.</SectionHeading>
-            <p className="text-gray-600 leading-relaxed mb-5 text-sm">
+            <p className="text-black leading-relaxed mb-5 text-sm">
               We exist to help individuals and businesses make confident financial decisions - not just to complete submissions, but to build the foundations for sustainable growth and compliance.
             </p>
-            <p className="text-gray-600 leading-relaxed mb-5 text-sm">
+            <p className="text-black leading-relaxed mb-5 text-sm">
               Too many businesses carry unnecessary risk because their financial records are incomplete, their compliance is reactive, and their reporting doesn't give them clear visibility of their position. We fix that.
             </p>
-            <p className="text-gray-600 leading-relaxed mb-7 text-sm">
+            <p className="text-black leading-relaxed mb-7 text-sm">
               Our integrated approach means your accountant, tax practitioner and compliance team are coordinated — working from the same information, toward the same goals. That's the Nozulu Mnisi difference.
             </p>
             <Btn onClick={() => navigate("services")}>Explore Our Services <ArrowRight size={15} /></Btn>
@@ -69,7 +69,7 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
                 style={{ borderColor: BORDER, background: LIGHT }}
               >
                 <p className="text-4xl font-black mb-1" style={{ color: GOLD, fontFamily: "'Montserrat', sans-serif" }}>{s.value}</p>
-                <p className="text-xs text-gray-500 font-semibold">{s.label}</p>
+                <p className="text-xs text-black font-semibold">{s.label}</p>
               </div>
             ))}
           </div>
@@ -86,11 +86,11 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {values.map((v) => (
               <div key={v.title} className="bg-white border rounded-xl p-6 text-center hover:shadow-md transition-all" style={{ borderColor: BORDER }}>
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4" style={{ background: NAVY + "0d", color: NAVY }}>
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4" style={{ background: BACKGROUND_BLUE + "0d", color: NAVY }}>
                   {v.icon}
                 </div>
                 <h3 className="font-black text-sm mb-2" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>{v.title}</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">{v.desc}</p>
+                <p className="text-xs text-black leading-relaxed">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -114,7 +114,7 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
                   <span className="text-2xl font-black shrink-0" style={{ color: GOLD, fontFamily: "'Montserrat', sans-serif" }}>{r.num}</span>
                   <div>
                     <h4 className="font-black text-sm mb-1.5" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>{r.title}</h4>
-                    <p className="text-sm text-gray-500 leading-relaxed">{r.desc}</p>
+                    <p className="text-sm text-black leading-relaxed">{r.desc}</p>
                   </div>
                 </div>
               ))}
@@ -136,7 +136,7 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
                   <CheckCircle size={18} className="shrink-0 mt-0.5" style={{ color: GOLD }} />
                   <div>
                     <span className="font-bold text-sm" style={{ color: NAVY }}>{v.title}</span>
-                    <p className="text-sm text-gray-500 mt-0.5">{v.desc}</p>
+                    <p className="text-sm text-black mt-0.5">{v.desc}</p>
                   </div>
                 </div>
               ))}
@@ -157,13 +157,13 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
                   className="w-24 h-24 rounded-xl shrink-0 flex items-center justify-center border-2 border-dashed"
                   style={{ background: "#E8ECF5", borderColor: BORDER }}
                 >
-                  <UserCircle size={36} className="text-gray-400" />
+                  <UserCircle size={36} className="text-black" />
                 </div>
                 <div>
                   <h3 className="text-lg font-black" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>{m.name}</h3>
                   <p className="text-sm font-semibold mb-0.5" style={{ color: GOLD }}>{m.role}</p>
-                  <p className="text-xs text-gray-400 mb-3">{m.creds}</p>
-                  <p className="text-sm text-gray-600 leading-relaxed">{m.bio}</p>
+                  <p className="text-xs text-black mb-3">{m.creds}</p>
+                  <p className="text-sm text-black leading-relaxed">{m.bio}</p>
                 </div>
               </div>
             ))}
@@ -177,7 +177,7 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
           <div className="border rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-start gap-7" style={{ borderColor: BORDER }}>
             <div
               className="w-16 h-16 rounded-xl flex items-center justify-center shrink-0"
-              style={{ background: NAVY + "0d" }}
+              style={{ background: BACKGROUND_BLUE + "0d" }}
             >
               <GraduationCap size={32} style={{ color: NAVY }} />
             </div>
@@ -186,10 +186,10 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
               <h3 className="text-xl font-black mb-3" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>
                 CIBA Approved Training Office
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed mb-4">
+              <p className="text-sm text-black leading-relaxed mb-4">
                 Nozulu Mnisi Consultants is an approved CIBA Training Office. This means we are formally recognised to provide structured, supervised work experience for trainee accountants - supporting their path to professional designation while contributing meaningfully to their development.
               </p>
-              <p className="text-sm text-gray-600 leading-relaxed mb-6">
+              <p className="text-sm text-black leading-relaxed mb-6">
                 We believe in growing the next generation of finance professionals. Our training environment is hands-on, values-driven and focused on producing technically capable practitioners.
               </p>
               <Btn>Learn More About Training Opportunities <ArrowRight size={15} /></Btn>
@@ -201,7 +201,7 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
       {/* Timeline snippet */}
       <section
         className="py-20 relative overflow-hidden"
-        style={{ background: `linear-gradient(135deg, ${NAVY} 0%, #1a3a6b 100%)` }}
+        style={{ background: `linear-gradient(135deg, ${NAVY} 0%, ${NAVY} 100%)` }}
       >
         <div className="max-w-7xl mx-auto px-5">
           <div className="text-center mb-12">
@@ -215,7 +215,7 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
               <div key={m.year} className="flex-1 relative">
                 <div className="flex md:flex-col items-start gap-4 md:gap-0 pb-6 md:pb-0 md:pr-4">
                   <div className="shrink-0">
-                    <div className="w-10 h-10 rounded-full border-2 flex items-center justify-center font-black text-xs" style={{ background: i === milestones.length - 1 ? GOLD : "rgba(255,255,255,0.1)", borderColor: GOLD, color: "white" }}>
+                    <div className="w-10 h-10 rounded-full border-2 flex items-center justify-center font-black text-xs" style={{ background: i === milestones.length - 1 ? BACKGROUND_GREEN : "rgba(255,255,255,0.1)", borderColor: GOLD, color: "white" }}>
                       {m.year.slice(2)}
                     </div>
                     {i < milestones.length - 1 && (
