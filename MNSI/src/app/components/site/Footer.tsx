@@ -1,6 +1,7 @@
 import { Linkedin, Facebook, Instagram, Youtube, Phone, Mail, MapPin } from "lucide-react";
 import { NAVY, GOLD } from "./shared";
 import type { Page } from "./Navbar";
+import companyLogo from "../../../imports/Screenshot 2026-08-27 110932.png";
 
 const quickLinks: { label: string; page: Page }[] = [
   { label: "Home",         page: "home" },
@@ -23,13 +24,7 @@ export default function Footer({ navigate }: { navigate: (p: Page) => void }) {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded flex items-center justify-center text-white font-black text-sm" style={{ background: GOLD }}>
-                NM
-              </div>
-              <div>
-                <p className="text-sm font-black text-white leading-none" style={{ fontFamily: "'Montserrat', sans-serif" }}>NOZULU MNISI</p>
-                <p className="text-sm font-black text-white leading-none" style={{ fontFamily: "'Montserrat', sans-serif" }}>CONSULTANTS</p>
-              </div>
+              <img src={companyLogo} alt="Nozulu Mnisi Consultants" className="h-14 w-auto object-contain" />
             </div>
             <p className="text-xs text-blue-200 leading-relaxed mb-2">Your Partner in Personal and Business Wellbeing.</p>
             <p className="text-xs text-blue-300 mb-5">Accounting · Taxation · Advisory</p>

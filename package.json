@@ -1,0 +1,8 @@
+{
+  "name": "nozulu-mnisi-consultants",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix MNSI run dev",
+    "build": "npm --prefix MNSI run build"
+  }
+}
