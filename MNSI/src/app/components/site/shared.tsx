@@ -45,7 +45,7 @@ export function Btn({
   onClick?: () => void;
   className?: string;
 }) {
-  const base = "inline-flex items-center gap-2 font-black px-6 py-3 rounded text-sm transition-all hover:opacity-90";
+  const base = "site-button inline-flex items-center gap-2 font-black px-6 py-3 rounded text-sm transition-all hover:opacity-90";
   const styles = {
     primary: { background: NAVY, color: "#fff" },
     outline: { border: `2px solid ${NAVY}`, color: NAVY, background: "transparent" },
@@ -73,15 +73,15 @@ export function PageHero({
 }) {
   return (
     <section
-      className="py-20 md:py-28 relative overflow-hidden"
-      style={{ background: `linear-gradient(135deg, ${BACKGROUND_BLUE} 0%, #1a3a6b 100%)` }}
+      className="blue-section py-20 md:py-28 relative overflow-hidden"
+      style={{ background: NAVY }}
     >
       <div
         className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10 pointer-events-none"
         style={{ background: BACKGROUND_GREEN, transform: "translate(30%,-30%)" }}
       />
       <div className="relative max-w-4xl mx-auto px-5 text-center">
-        <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4" style={{ color: GOLD }}>
+        <p className="text-xs font-bold tracking-[0.25em] uppercase mb-4 text-white">
           {label}
         </p>
         <h1
@@ -90,7 +90,7 @@ export function PageHero({
         >
           {title}
         </h1>
-        {subtitle && <p className="text-blue-200 text-lg max-w-2xl mx-auto">{subtitle}</p>}
+        {subtitle && <p className="text-white text-lg max-w-2xl mx-auto">{subtitle}</p>}
       </div>
     </section>
   );

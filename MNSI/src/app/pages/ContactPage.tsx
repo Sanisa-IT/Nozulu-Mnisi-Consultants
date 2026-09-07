@@ -4,14 +4,14 @@ import { NAVY, GOLD, LIGHT, BORDER, BACKGROUND_BLUE, BACKGROUND_GREEN, SectionLa
 
 const offices = [
   {
-    name: "Gauteng — Head Office",
+    name: "Gauteng - Head Office",
     address: ["10 Edgar Road", "Benista Office Park", "Janssen Park", "Boksburg, 1459"],
     phone: "011 568 7121",
     email: "admin@nozulumnisi.co.za",
     hours: "Mon - Fri: 08:00 - 17:00",
   },
   {
-    name: "KwaZulu-Natal — Durban Office",
+    name: "KwaZulu-Natal - Durban Office",
     address: ["9 Linden Road", "Eschenwood", "Durban, 4001"],
     phone: "031 100 0320",
     email: "admin@nozulumnisi.co.za",
@@ -50,7 +50,7 @@ export default function ContactPage() {
     <div>
       <PageHero
         label="Contact Us"
-        title={<>Let's Work <span style={{ color: GOLD }}>Together.</span></>}
+        title={<>Let's Work <span className="text-white">Together.</span></>}
         subtitle="We're ready to support your financial goals. Reach out and let's have a conversation."
       />
 
@@ -109,17 +109,17 @@ export default function ContactPage() {
             </div>
             <div
               className="rounded-xl p-5 border"
-              style={{ background: `linear-gradient(135deg, ${BACKGROUND_BLUE} 0%, #1a3a6b 100%)`, borderColor: NAVY }}
+              style={{ background: NAVY, borderColor: NAVY }}
             >
-              <p className="text-xs font-black tracking-widest uppercase mb-3" style={{ color: GOLD }}>Direct Contact</p>
+              <p className="text-xs font-black tracking-widest uppercase mb-3 text-white">Direct Contact</p>
               <div className="space-y-2.5">
-                <div className="flex items-center gap-2 text-sm text-blue-200">
+                <div className="flex items-center gap-2 text-sm text-white">
                   <Phone size={13} style={{ color: GOLD }} /> 011 568 7121 (Gauteng)
                 </div>
-                <div className="flex items-center gap-2 text-sm text-blue-200">
+                <div className="flex items-center gap-2 text-sm text-white">
                   <Phone size={13} style={{ color: GOLD }} /> 031 100 0320 (KZN)
                 </div>
-                <div className="flex items-center gap-2 text-sm text-blue-200">
+                <div className="flex items-center gap-2 text-sm text-white">
                   <Mail size={13} style={{ color: GOLD }} /> admin@nozulumnisi.co.za
                 </div>
               </div>

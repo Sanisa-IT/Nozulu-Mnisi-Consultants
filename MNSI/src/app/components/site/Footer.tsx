@@ -26,8 +26,8 @@ export default function Footer({ navigate }: { navigate: (p: Page) => void }) {
             <div className="flex items-center gap-3 mb-5">
               <img src={companyLogo} alt="Nozulu Mnisi Consultants" className="h-14 w-auto object-contain" />
             </div>
-            <p className="text-xs text-blue-200 leading-relaxed mb-2">Your Partner in Personal and Business Wellbeing.</p>
-            <p className="text-xs text-blue-300 mb-5">Accounting · Taxation · Advisory</p>
+            <p className="text-xs text-white leading-relaxed mb-2">Your Partner in Personal and Business Wellbeing.</p>
+            <p className="text-xs text-white mb-5">Accounting · Taxation · Advisory</p>
             <div className="flex gap-2 mb-5">
               {[<Linkedin size={15} />, <Facebook size={15} />, <Instagram size={15} />, <Youtube size={15} />].map((icon, i) => (
                 <div key={i} className="w-8 h-8 rounded flex items-center justify-center text-white hover:opacity-80 cursor-pointer transition-opacity" style={{ background: "rgba(255,255,255,0.12)" }}>
@@ -36,13 +36,13 @@ export default function Footer({ navigate }: { navigate: (p: Page) => void }) {
               ))}
             </div>
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-xs text-blue-200">
+              <div className="flex items-center gap-2 text-xs text-white">
                 <Phone size={12} style={{ color: GOLD }} /> 011 568 7121 (Gauteng)
               </div>
-              <div className="flex items-center gap-2 text-xs text-blue-200">
+              <div className="flex items-center gap-2 text-xs text-white">
                 <Phone size={12} style={{ color: GOLD }} /> 031 100 0320 (KZN)
               </div>
-              <div className="flex items-center gap-2 text-xs text-blue-200">
+              <div className="flex items-center gap-2 text-xs text-white">
                 <Mail size={12} style={{ color: GOLD }} /> admin@nozulumnisi.co.za
               </div>
             </div>
@@ -50,11 +50,11 @@ export default function Footer({ navigate }: { navigate: (p: Page) => void }) {
 
           {/* Quick Links */}
           <div>
-            <p className="text-xs font-black tracking-[0.2em] uppercase mb-5" style={{ color: GOLD }}>Quick Links</p>
+            <p className="text-xs font-black tracking-[0.2em] uppercase mb-5 text-white">Quick Links</p>
             <ul className="space-y-2.5">
               {quickLinks.map(({ label, page }) => (
                 <li key={page}>
-                  <button onClick={() => go(page)} className="text-xs text-blue-200 hover:text-white transition-colors">
+                  <button onClick={() => go(page)} className="text-xs text-white hover:text-white transition-colors">
                     {label}
                   </button>
                 </li>
@@ -64,17 +64,17 @@ export default function Footer({ navigate }: { navigate: (p: Page) => void }) {
 
           {/* Offices */}
           <div>
-            <p className="text-xs font-black tracking-[0.2em] uppercase mb-5" style={{ color: GOLD }}>Offices</p>
+            <p className="text-xs font-black tracking-[0.2em] uppercase mb-5 text-white">Offices</p>
             <div className="space-y-5">
               <div>
-                <p className="text-xs font-black text-white mb-1.5">Gauteng — Head Office</p>
-                <p className="text-xs text-blue-200 leading-relaxed">
+                <p className="text-xs font-black text-white mb-1.5">Gauteng - Head Office</p>
+                <p className="text-xs text-white leading-relaxed">
                   10 Edgar Road<br />Benista Office Park<br />Janssen Park<br />Boksburg, 1459
                 </p>
               </div>
               <div>
-                <p className="text-xs font-black text-white mb-1.5">KwaZulu-Natal — Durban Office</p>
-                <p className="text-xs text-blue-200 leading-relaxed">
+                <p className="text-xs font-black text-white mb-1.5">KwaZulu-Natal - Durban Office</p>
+                <p className="text-xs text-white leading-relaxed">
                   9 Linden Road<br />Eschenwood<br />Durban, 4001
                 </p>
               </div>
@@ -83,17 +83,17 @@ export default function Footer({ navigate }: { navigate: (p: Page) => void }) {
 
           {/* Legal + Services */}
           <div>
-            <p className="text-xs font-black tracking-[0.2em] uppercase mb-5" style={{ color: GOLD }}>Legal</p>
+            <p className="text-xs font-black tracking-[0.2em] uppercase mb-5 text-white">Legal</p>
             <ul className="space-y-2.5 mb-8">
               {["Privacy Policy", "Terms & Conditions", "POPIA", "Disclaimer"].map((l) => (
-                <li key={l}><a href="#" className="text-xs text-blue-200 hover:text-white transition-colors">{l}</a></li>
+                <li key={l}><a href="#" className="text-xs text-white hover:text-white transition-colors">{l}</a></li>
               ))}
             </ul>
-            <p className="text-xs font-black tracking-[0.2em] uppercase mb-4" style={{ color: GOLD }}>Services</p>
+            <p className="text-xs font-black tracking-[0.2em] uppercase mb-4 text-white">Services</p>
             <ul className="space-y-2">
               {["Financial Reporting", "Taxation", "Payroll", "Statutory Compliance", "Advisory", "Finance Operations"].map((s) => (
                 <li key={s}>
-                  <button onClick={() => go("services")} className="text-xs text-blue-200 hover:text-white transition-colors">
+                  <button onClick={() => go("services")} className="text-xs text-white hover:text-white transition-colors">
                     {s}
                   </button>
                 </li>
@@ -103,8 +103,8 @@ export default function Footer({ navigate }: { navigate: (p: Page) => void }) {
         </div>
 
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-blue-300">© 2025 Nozulu Mnisi Consultants. All rights reserved.</p>
-          <p className="text-xs text-blue-400">Registered Tax Practitioner · AGA(SA) · CIBA Approved Training Office</p>
+          <p className="text-xs text-white">© 2025 Nozulu Mnisi Consultants. All rights reserved.</p>
+          <p className="text-xs text-white">Registered Tax Practitioner · AGA(SA) · CIBA Approved Training Office</p>
         </div>
       </div>
     </footer>

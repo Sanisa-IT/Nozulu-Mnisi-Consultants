@@ -17,7 +17,7 @@ const team = [
     name: "Riaan Bright Govender",
     role: "Partner & Managing Director",
     creds: "AGA(SA) | BA(PISA) · Registered Tax Practitioner",
-    bio: "Riaan leads the firm with a focus on technical accuracy, client relationships and senior involvement in every engagement. His background spans financial reporting, taxation and advisory work across multiple sectors. Leadership remains close to delivery — that is a non-negotiable principle at Nozulu Mnisi Consultants.",
+    bio: "Riaan leads the firm with a focus on technical accuracy, client relationships and senior involvement in every engagement. His background spans financial reporting, taxation and advisory work across multiple sectors. Leadership remains close to delivery - that is a non-negotiable principle at Nozulu Mnisi Consultants.",
   },
 ];
 
@@ -34,7 +34,7 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
     <div>
       <PageHero
         label="About Us"
-        title={<>Built for Clarity,<br />Compliance &amp; <span style={{ color: GOLD }}>Confident Decisions.</span></>}
+        title={<>Built for Clarity,<br />Compliance &amp; <span className="text-white">Confident Decisions.</span></>}
         subtitle="Nozulu Mnisi Consultants combines technical discipline with active, senior-led client support across accounting, taxation and advisory."
       />
 
@@ -51,7 +51,7 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
               Too many businesses carry unnecessary risk because their financial records are incomplete, their compliance is reactive, and their reporting doesn't give them clear visibility of their position. We fix that.
             </p>
             <p className="text-black leading-relaxed mb-7 text-sm">
-              Our integrated approach means your accountant, tax practitioner and compliance team are coordinated — working from the same information, toward the same goals. That's the Nozulu Mnisi difference.
+              Our integrated approach means your accountant, tax practitioner and compliance team are coordinated - working from the same information, toward the same goals. That's the Nozulu Mnisi difference.
             </p>
             <Btn onClick={() => navigate("services")}>Explore Our Services <ArrowRight size={15} /></Btn>
           </div>
@@ -200,12 +200,12 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
 
       {/* Timeline snippet */}
       <section
-        className="py-20 relative overflow-hidden"
-        style={{ background: `linear-gradient(135deg, ${NAVY} 0%, ${NAVY} 100%)` }}
+        className="blue-section py-20 relative overflow-hidden"
+        style={{ background: NAVY }}
       >
         <div className="max-w-7xl mx-auto px-5">
           <div className="text-center mb-12">
-            <p className="text-xs font-black tracking-[0.2em] uppercase mb-3" style={{ color: GOLD }}>Our Story</p>
+            <p className="text-xs font-black tracking-[0.2em] uppercase mb-3 text-white">Our Story</p>
             <h2 className="text-3xl font-black text-white" style={{ fontFamily: "'Montserrat', sans-serif" }}>
               Where we started. Where we're going.
             </h2>
@@ -223,8 +223,8 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
                     )}
                   </div>
                   <div className="mt-0 md:mt-4">
-                    <p className="text-xs font-black mb-1" style={{ color: GOLD }}>{m.year}{m.title ? ` — ${m.title}` : ""}</p>
-                    <p className="text-xs text-blue-200 leading-relaxed">{m.desc}</p>
+                    <p className="text-xs font-black mb-1" style={{ color: GOLD }}>{m.year}{m.title ? ` - ${m.title}` : ""}</p>
+                    <p className="text-xs text-white leading-relaxed">{m.desc}</p>
                   </div>
                 </div>
               </div>
@@ -234,7 +234,7 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
             <button
               onClick={() => navigate("journey")}
               className="font-black px-6 py-3 rounded text-sm border-2 hover:bg-white/10 transition-all"
-              style={{ borderColor: GOLD, color: GOLD, fontFamily: "'Montserrat', sans-serif" }}
+              style={{ borderColor: "white", color: "white", fontFamily: "'Montserrat', sans-serif" }}
             >
               View Full Journey
             </button>

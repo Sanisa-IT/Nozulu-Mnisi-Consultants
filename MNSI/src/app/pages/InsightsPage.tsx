@@ -37,7 +37,7 @@ const articles = [
   {
     category: "Financial Reporting",
     title: "Why Your Management Accounts Are More Valuable Than Your Annual Statements",
-    excerpt: "Annual financial statements are important — but they're backwards-looking. Monthly management accounts give you the forward-looking insight you actually need to run your business.",
+    excerpt: "Annual financial statements are important - but they're backwards-looking. Monthly management accounts give you the forward-looking insight you actually need to run your business.",
     date: "8 May 2025",
     readTime: "5 min read",
     color: "#7c3aed",
@@ -69,7 +69,7 @@ const articles = [
   {
     category: "Advisory",
     title: "5 Financial KPIs Every Business Owner Should Track Monthly",
-    excerpt: "You don't need a full-time CFO to have financial visibility. These five key performance indicators give you a clear picture of your business's financial health — every single month.",
+    excerpt: "You don't need a full-time CFO to have financial visibility. These five key performance indicators give you a clear picture of your business's financial health - every single month.",
     date: "28 February 2025",
     readTime: "5 min read",
     color: "#2563eb",
@@ -118,7 +118,7 @@ export default function InsightsPage() {
           >
             <div
               className="min-h-[220px] flex items-center justify-center p-10"
-              style={{ background: `linear-gradient(135deg, ${NAVY} 0%, #1a3a6b 100%)` }}
+              style={{ background: NAVY }}
             >
               <div className="text-center">
                 <span
@@ -199,15 +199,15 @@ export default function InsightsPage() {
 
       {/* Subscribe */}
       <section
-        className="py-16 relative overflow-hidden"
-        style={{ background: `linear-gradient(135deg, ${NAVY} 0%, #1a3a6b 100%)` }}
+        className="blue-section py-16 relative overflow-hidden"
+        style={{ background: NAVY }}
       >
         <div className="relative max-w-xl mx-auto px-5 text-center">
           <p className="text-xs font-black tracking-[0.2em] uppercase mb-3" style={{ color: GOLD }}>Stay Informed</p>
           <h2 className="text-2xl font-black text-white mb-4" style={{ fontFamily: "'Montserrat', sans-serif" }}>
             Get insights delivered to your inbox.
           </h2>
-          <p className="text-blue-200 text-sm mb-6">Practical guidance on tax, compliance and financial management — no noise, just value.</p>
+          <p className="text-white text-sm mb-6">Practical guidance on tax, compliance and financial management - no noise, just value.</p>
           <div className="flex gap-2">
             <input
               type="email"

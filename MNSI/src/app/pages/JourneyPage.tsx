@@ -4,65 +4,44 @@ import type { Page } from "../components/site/Navbar";
 
 const milestones = [
   {
-    year: "2018",
+    year: "2022",
     label: "The Beginning",
-    desc: "Nozulu Mnisi Consultants was established with a clear purpose: to provide senior-led, integrated financial services to businesses that were underserved by large firms and overlooked by solo practitioners.",
-    detail: "Founded on the principle that clients deserve direct access to experienced professionals — not junior staff — the firm began with a focused client base in Gauteng.",
+    desc: "Nozulu Mnisi Consultants began with a clear purpose: give businesses direct access to senior-led accounting, taxation and advisory support.",
+    detail: "The first chapter was built around trust, technical accuracy and a simple promise - understand the client, take ownership and make the numbers useful.",
     highlight: "Foundation year · Gauteng operations launched",
   },
   {
-    year: "2019",
-    label: "Building the Base",
-    desc: "We refined our service model, deepened our expertise in taxation and compliance, and grew our client relationships through consistent delivery.",
-    detail: "The focus in year two was quality over growth. Building reliable systems, establishing repeatable processes and earning the trust of early clients who remain with us today.",
-    highlight: "Systems + processes established",
-  },
-  {
-    year: "2020",
-    label: "Building the Foundation",
-    desc: "Early clients. Services. Team growth. Despite a challenging economic environment, we used the period to invest in our capacity, our team and our systems.",
-    detail: "We broadened our service offering to include full payroll administration and statutory compliance — moving from a tax-focused practice to a genuinely integrated firm.",
-    highlight: "Full payroll + statutory compliance launched",
-  },
-  {
-    year: "2021",
-    label: "Resilience and Growth",
-    desc: "We navigated a demanding regulatory environment and expanded our client base across professional service firms and owner-managed businesses.",
-    detail: "Demand for integrated financial support was growing. Clients began referring us because of the consistency and reliability of our work — a validation of our service model.",
-    highlight: "Referral network grows · Client base expands",
-  },
-  {
-    year: "2022",
-    label: "Growing Our Reach",
-    desc: "We expanded our presence to KwaZulu-Natal, opening a Durban office to serve clients across two of South Africa's key economic provinces.",
-    detail: "The KZN expansion was a significant milestone. It allowed us to serve multi-province clients under one firm — maintaining consistency of service and senior oversight regardless of geography.",
-    highlight: "Durban office opened · Multi-regional firm established",
-  },
-  {
     year: "2023",
-    label: "Deepening Expertise",
-    desc: "We strengthened our advisory capability — moving beyond compliance and reporting to provide genuine financial insight and planning support.",
-    detail: "Clients asked us to do more. We responded by building structured advisory services: budgets, forecasts, cash flow planning and scenario analysis that translate financial data into real decisions.",
-    highlight: "Advisory services formalised",
+    label: "Building the Base",
+    desc: "We strengthened the systems behind the service - refining processes, expanding the client base and turning early momentum into dependable delivery.",
+    detail: "Accounting, tax and compliance work became more connected, giving clients one coordinated team and a clearer view of their financial obligations.",
+    highlight: "Integrated service model established",
   },
   {
     year: "2024",
-    label: "Strengthening Our Services",
-    desc: "Integrated services. Senior-led delivery. CIBA Approved Training Office status formalised our commitment to developing the next generation of finance professionals.",
-    detail: "Being recognised as a CIBA Approved Training Office was a defining achievement. It reflects our commitment to the profession and to creating structured pathways for emerging practitioners.",
-    highlight: "CIBA Approved Training Office · Integrated delivery model",
+    label: "Deepening Expertise",
+    desc: "As client needs became more complex, we expanded beyond compliance and reporting into practical financial insight and planning.",
+    detail: "Budgets, forecasts, cash flow planning and scenario analysis gave clients a stronger basis for making decisions with confidence.",
+    highlight: "Advisory services formalised",
   },
   {
     year: "2025",
+    label: "Growing Our Reach",
+    desc: "We expanded our presence to KwaZulu-Natal, opening a Durban office and strengthening our ability to serve clients across two provinces.",
+    detail: "The regional expansion brought the same senior oversight and connected service model to a wider client base.",
+    highlight: "Durban office opened · Multi-regional firm established",
+  },
+  {
+    year: "2026",
     label: "Where We Are Today",
-    desc: "Today Nozulu Mnisi Consultants is a senior-led, integrated accounting, taxation and advisory firm operating across Gauteng and KwaZulu-Natal.",
-    detail: "We serve owner-managed businesses, professional firms, public-sector entities, membership organisations, industrial businesses and individual executives — each with a consistent, senior-led approach.",
+    desc: "Today Nozulu Mnisi Consultants is a senior-led, integrated accounting, taxation and advisory firm serving clients across Gauteng and KwaZulu-Natal.",
+    detail: "We serve owner-managed businesses, professional firms, public-sector entities, membership organisations, industrial businesses and individual executives with the same focused approach.",
     highlight: "Two provinces · Six service pillars · Growing team",
   },
   {
     year: "2026+",
     label: "What's Next",
-    desc: "We continue to grow — in reach, in depth, and in the value we deliver to clients across South Africa.",
+    desc: "We continue to grow - in reach, in depth, and in the value we deliver to clients across South Africa.",
     detail: "Our focus remains on doing excellent work for every client, developing talented professionals through our training programme, and building a firm that stands for quality, integrity and impact.",
     highlight: "Creating value. Building impact.",
     isFuture: true,
@@ -74,8 +53,8 @@ export default function JourneyPage({ navigate }: { navigate: (p: Page) => void 
     <div>
       <PageHero
         label="Our Journey"
-        title={<>Where We Started.<br /><span style={{ color: GOLD }}>Where We're Going.</span></>}
-        subtitle="From a focused Gauteng practice in 2018 to a multi-regional, senior-led integrated firm — this is our story."
+        title={<>Where We Started.<br /><span className="text-white">Where We're Going.</span></>}
+        subtitle="From a focused Gauteng practice in 2022 to a multi-regional, senior-led integrated firm - this is our story."
       />
 
       {/* Full timeline */}
@@ -85,7 +64,7 @@ export default function JourneyPage({ navigate }: { navigate: (p: Page) => void 
             {/* Centre line */}
             <div
               className="absolute left-[18px] md:left-1/2 top-0 bottom-0 w-px"
-              style={{ background: `linear-gradient(to bottom, ${BACKGROUND_GREEN}, ${BACKGROUND_BLUE})`, transform: "translateX(-50%)" }}
+              style={{ background: NAVY, transform: "translateX(-50%)" }}
             />
 
             <div className="space-y-10">
@@ -143,11 +122,11 @@ export default function JourneyPage({ navigate }: { navigate: (p: Page) => void 
         <div className="max-w-7xl mx-auto px-5">
           <div className="text-center mb-12">
             <SectionLabel>By the numbers</SectionLabel>
-            <SectionHeading center>Seven years of consistent delivery.</SectionHeading>
+            <SectionHeading center>Four years of focused, consistent delivery.</SectionHeading>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {[
-              { value: "2018", label: "Year Founded" },
+              { value: "2022", label: "Year Founded" },
               { value: "2",    label: "Provinces" },
               { value: "6",    label: "Service Pillars" },
               { value: "Level 1", label: "B-BBEE Status" },
@@ -163,18 +142,24 @@ export default function JourneyPage({ navigate }: { navigate: (p: Page) => void 
 
       {/* CTA */}
       <section
-        className="py-16 relative overflow-hidden"
-        style={{ background: `linear-gradient(135deg, ${BACKGROUND_BLUE} 0%, #1a3a6b 100%)` }}
+        className="blue-section py-16 relative overflow-hidden"
+        style={{ background: NAVY }}
       >
         <div className="relative max-w-3xl mx-auto px-5 text-center">
-          <p className="text-xs font-black tracking-[0.2em] uppercase mb-3" style={{ color: GOLD }}>Be Part of the Journey</p>
+          <p className="text-xs font-black tracking-[0.2em] uppercase mb-3 text-white">Be Part of the Journey</p>
           <h2 className="text-3xl font-black text-white mb-5" style={{ fontFamily: "'Montserrat', sans-serif" }}>
             Let's build your financial future together.
           </h2>
-          <p className="text-blue-200 mb-8 text-sm">
+          <p className="text-white mb-8 text-sm">
             Whether you're starting out or scaling up, we have the expertise and the commitment to support your goals.
           </p>
-          <Btn variant="gold" onClick={() => navigate("contact")}>Book a Consultation <ArrowRight size={15} /></Btn>
+          <button
+              onClick={() => navigate("contact")}
+              className="font-black px-8 py-3.5 rounded text-white text-sm hover:opacity-90 transition-all border-2"
+              style={{ borderColor: "white", color: "white", fontFamily: "'Montserrat', sans-serif" }}
+            >
+              Book a Free Consultation
+            </button>
         </div>
       </section>
     </div>

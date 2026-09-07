@@ -11,7 +11,7 @@ const segments = [
     title: "Owner-Managed Businesses & SMEs",
     desc: "The backbone of the South African economy. Owner-managed businesses face unique challenges: wearing multiple hats, managing cash flow, staying compliant and finding time to plan ahead.",
     needs: ["Monthly bookkeeping and management accounts", "Tax compliance and provisional tax", "Payroll for a growing team", "Cash flow planning and advisory", "Year-end financial statements"],
-    quote: "We work directly with business owners — not just their files. Your success is our measure.",
+    quote: "We work directly with business owners - not just their files. Your success is our measure.",
   },
   {
     icon: <Briefcase size={28} />,
@@ -30,7 +30,7 @@ const segments = [
   {
     icon: <HeartHandshake size={28} />,
     title: "Membership Organisations & Co-operatives",
-    desc: "Non-profits, associations, co-operatives and membership bodies have distinct financial obligations — including donor reporting, member levies and governance requirements.",
+    desc: "Non-profits, associations, co-operatives and membership bodies have distinct financial obligations - including donor reporting, member levies and governance requirements.",
     needs: ["Fund accounting and restricted grant reporting", "Annual financial statements", "Compliance with NPO Act and CIPC requirements", "Payroll and staff management", "Board reporting and management accounts"],
     quote: "We understand the governance and reporting requirements of non-profit and member-based structures.",
   },
@@ -46,7 +46,7 @@ const segments = [
     title: "Individuals, Directors & Executives",
     desc: "High-earning individuals, directors and executives have complex personal tax affairs, investment income and multiple income streams that require specialist attention.",
     needs: ["Personal income tax returns", "Investment and rental income reporting", "Director's loan account management", "Estate and trust tax compliance", "Tax planning and structuring"],
-    quote: "Your financial affairs deserve the same senior attention as any business — we provide exactly that.",
+    quote: "Your financial affairs deserve the same senior attention as any business - we provide exactly that.",
   },
 ];
 
@@ -55,8 +55,8 @@ export default function WhoWeServePage({ navigate }: { navigate: (p: Page) => vo
     <div>
       <PageHero
         label="Who We Serve"
-        title={<>Financial Support Built Around <span style={{ color: GOLD }}>Different Realities.</span></>}
-        subtitle="We serve a diverse range of clients — each with different structures, obligations and goals. Our integrated approach adapts to all of them."
+        title={<>Financial Support Built Around <span className="text-white">Different Realities.</span></>}
+        subtitle="We serve a diverse range of clients - each with different structures, obligations and goals. Our integrated approach adapts to all of them."
       />
 
       {/* Segment grid overview */}
@@ -136,7 +136,7 @@ export default function WhoWeServePage({ navigate }: { navigate: (p: Page) => vo
           <SectionLabel>Not sure if we're the right fit?</SectionLabel>
           <SectionHeading center>Let's have a conversation.</SectionHeading>
           <p className="text-black mb-8 text-sm leading-relaxed">
-            We'll take the time to understand your situation and be honest about whether — and how — we can help. No obligation. No pressure.
+            We'll take the time to understand your situation and be honest about whether - and how - we can help. No obligation. No pressure.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Btn onClick={() => navigate("contact")}>Book a Free Consultation <ArrowRight size={15} /></Btn>

@@ -29,7 +29,7 @@ const steps = [
 export default function HomePage({ navigate }: { navigate: (p: Page) => void }) {
   return (
     <div className="flex flex-col">
-      {/* ── Hero ── */}
+      {/* Hero */}
       <section className="bg-white" style={{ order: 1 }}>
         <div
           className="relative overflow-hidden bg-cover bg-center"
@@ -43,16 +43,16 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
             >
               Your Partner in<br />Personal and<br />Business <span style={{ color: GOLD }}>Wellbeing.</span>
             </h1>
-            <p className="text-blue-50 text-base leading-relaxed mb-8 max-w-lg">
+            <p className="text-white text-base leading-relaxed mb-8 max-w-lg">
               Accounting, taxation and advisory support built around accurate information, disciplined compliance and practical insight.
             </p>
             <div className="flex flex-wrap gap-3 mb-8">
               <Btn onClick={() => navigate("contact")}>Let's Work Together</Btn>
-              <Btn variant="outline" onClick={() => navigate("services")}>Explore Our Services</Btn>
+              <Btn variant="outline" className="hero-outline-button" onClick={() => navigate("services")}>Explore Our Services</Btn>
             </div>
             <div className="flex items-center gap-2 text-sm text-black">
               <MapPin size={15} style={{ color: GOLD }} />
-              <span className="text-blue-50">Gauteng | KwaZulu-Natal | South Africa</span>
+              <span className="text-white">Gauteng | KwaZulu-Natal | South Africa</span>
             </div>
           </div>
 
@@ -82,7 +82,7 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
         </div>
       </section>
 
-      {/* ── About snippet ── */}
+      {/* About snippet */}
       <section className="py-20" style={{ background: LIGHT, order: 2 }}>
         <div className="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-14 items-center">
           <img
@@ -110,10 +110,10 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
         </div>
       </section>
 
-      {/* ── Services preview ── */}
-      <section className="py-20 bg-white" style={{ order: 4 }}>
+      {/* Services preview */}
+      <section className="services-preview py-20 bg-white" style={{ order: 4 }}>
         <div className="max-w-7xl mx-auto px-5">
-          <div className="text-center mb-12">
+          <div className="services-heading text-center mb-12">
             <SectionLabel>Our Services</SectionLabel>
             <SectionHeading center>One Firm. Six Connected Service Pillars.</SectionHeading>
           </div>
@@ -121,17 +121,17 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
             {services.map((s, i) => (
               <div
                 key={s.title}
-                className="border rounded-xl p-6 hover:shadow-md transition-all group cursor-pointer"
-                style={{ borderColor: BORDER }}
+                className="service-card service-card-blue rounded-xl p-6 group cursor-pointer"
+                style={{ animationDelay: `${i * 90}ms` }}
                 onClick={() => navigate("services")}
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-xs font-black tracking-widest" style={{ color: GOLD }}>0{i + 1}</span>
-                  <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: BACKGROUND_BLUE + "0d", color: NAVY }}>
+                  <span className="service-number text-xs font-black tracking-widest" style={{ color: NAVY }}>0{i + 1}</span>
+                  <div className="service-icon w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: "rgba(0,74,173,0.10)", color: NAVY }}>
                     {s.icon}
                   </div>
                 </div>
-                <h3 className="font-black text-sm mb-2 group-hover:text-amber-700 transition-colors" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>
+                <h3 className="font-black text-sm mb-2 transition-colors" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>
                   {s.title}
                 </h3>
                 <p className="text-xs text-black leading-relaxed">{s.desc}</p>
@@ -144,7 +144,7 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
         </div>
       </section>
 
-      {/* ── Approach ── */}
+      {/* Approach */}
       <section className="py-20" style={{ background: LIGHT, order: 5 }}>
         <div className="max-w-7xl mx-auto px-5">
           <div className="text-center mb-12">
@@ -170,9 +170,9 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
         </div>
       </section>
 
-      {/* ── Why us stats ── */}
+      {/* Why us stats */}
       <section
-        className="py-20 relative overflow-hidden"
+        className="blue-section py-20 relative overflow-hidden"
         style={{ background: NAVY, order: 3 }}
       >
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10" style={{ background: "white", transform: "translate(30%,-30%)" }} />

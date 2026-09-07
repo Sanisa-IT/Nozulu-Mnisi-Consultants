@@ -9,11 +9,11 @@ const faqCategories = [
     faqs: [
       {
         q: "What services does Nozulu Mnisi Consultants provide?",
-        a: "We offer six integrated service pillars: Financial Reporting, Taxation, Payroll, Statutory Compliance, Advisory and Finance Operations. Our services are designed to work together — managed by a single coordinated team so nothing falls through the cracks.",
+        a: "We offer six integrated service pillars: Financial Reporting, Taxation, Payroll, Statutory Compliance, Advisory and Finance Operations. Our services are designed to work together - managed by a single coordinated team so nothing falls through the cracks.",
       },
       {
         q: "Do you work with small and medium-sized businesses?",
-        a: "Absolutely. SMEs and owner-managed businesses are a core part of our client base. We understand the unique challenges of running a growing business — from cash flow management to compliance — and we provide support that's proportionate to your size and stage.",
+        a: "Absolutely. SMEs and owner-managed businesses are a core part of our client base. We understand the unique challenges of running a growing business - from cash flow management to compliance - and we provide support that's proportionate to your size and stage.",
       },
       {
         q: "Where are you based and who do you serve?",
@@ -21,7 +21,7 @@ const faqCategories = [
       },
       {
         q: "What makes Nozulu Mnisi different from other accounting firms?",
-        a: "Three things: senior involvement, integration and context. You deal with experienced professionals — not juniors — from day one. All your financial functions are coordinated by one team. And we connect compliance requirements to how your business actually operates, not just the letter of the regulation.",
+        a: "Three things: senior involvement, integration and context. You deal with experienced professionals - not juniors - from day one. All your financial functions are coordinated by one team. And we connect compliance requirements to how your business actually operates, not just the letter of the regulation.",
       },
     ],
   },
@@ -30,7 +30,7 @@ const faqCategories = [
     faqs: [
       {
         q: "Can you take over our existing accounting function?",
-        a: "Yes. We regularly take over from other providers or bring order to self-managed accounting functions. We'll assess your current records, identify gaps and put together a plan to bring you fully up to date — before establishing an ongoing service structure.",
+        a: "Yes. We regularly take over from other providers or bring order to self-managed accounting functions. We'll assess your current records, identify gaps and put together a plan to bring you fully up to date - before establishing an ongoing service structure.",
       },
       {
         q: "Can you assist if our accounting records are behind?",
@@ -47,7 +47,7 @@ const faqCategories = [
     faqs: [
       {
         q: "Do you assist with tax compliance?",
-        a: "Yes. Tax compliance is central to what we do — income tax, VAT, provisional tax, payroll taxes, SARS registrations, Tax Compliance Status (TCS) applications and dispute resolution. We manage your full tax calendar so you're never caught off-guard.",
+        a: "Yes. Tax compliance is central to what we do - income tax, VAT, provisional tax, payroll taxes, SARS registrations, Tax Compliance Status (TCS) applications and dispute resolution. We manage your full tax calendar so you're never caught off-guard.",
       },
       {
         q: "Can you help if we're in dispute with SARS?",
@@ -55,7 +55,7 @@ const faqCategories = [
       },
       {
         q: "Do you do personal income tax returns for individuals?",
-        a: "Yes. We assist individuals, including directors, executives and professionals, with personal income tax returns — including investment income, rental income and complex income structures. We ensure your return is accurate and your tax position is optimised legally.",
+        a: "Yes. We assist individuals, including directors, executives and professionals, with personal income tax returns - including investment income, rental income and complex income structures. We ensure your return is accurate and your tax position is optimised legally.",
       },
     ],
   },
@@ -77,7 +77,7 @@ const faqCategories = [
     faqs: [
       {
         q: "Do you handle CIPC annual returns and company secretarial work?",
-        a: "Yes. We manage CIPC annual returns, beneficial ownership register submissions and general company secretarial compliance — keeping your entity in good standing with the Companies and Intellectual Property Commission.",
+        a: "Yes. We manage CIPC annual returns, beneficial ownership register submissions and general company secretarial compliance - keeping your entity in good standing with the Companies and Intellectual Property Commission.",
       },
       {
         q: "What is beneficial ownership and do I need to comply?",
@@ -90,7 +90,7 @@ const faqCategories = [
     faqs: [
       {
         q: "How do I get started with Nozulu Mnisi Consultants?",
-        a: "The first step is a no-obligation consultation — either by phone, video or in person. We'll listen to your situation, ask the right questions and give you an honest assessment of how we can help and what it would cost. From there, we agree on a scope and get started.",
+        a: "The first step is a no-obligation consultation - either by phone, video or in person. We'll listen to your situation, ask the right questions and give you an honest assessment of how we can help and what it would cost. From there, we agree on a scope and get started.",
       },
       {
         q: "How long does it take to onboard a new client?",
@@ -128,7 +128,7 @@ export default function FaqsPage({ navigate }: { navigate: (p: Page) => void }) 
     <div>
       <PageHero
         label="FAQs"
-        title={<>Questions?<br /><span style={{ color: GOLD }}>We've Got Answers.</span></>}
+        title={<>Questions?<br /><span className="text-white">We've Got Answers.</span></>}
         subtitle="Everything you need to know about working with Nozulu Mnisi Consultants."
       />
 

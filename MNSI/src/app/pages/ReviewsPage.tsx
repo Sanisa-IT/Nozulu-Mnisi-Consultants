@@ -7,16 +7,16 @@ const reviews = {
   gauteng: [
     { name: "Themba M.", role: "Director, Construction Company", stars: 5, text: "Nozulu Mnisi has transformed how we manage our finances. What used to take weeks now happens seamlessly each month. Riaan and his team are always available and always accurate. I wouldn't trust our accounts to anyone else." },
     { name: "Priya N.", role: "Sole Proprietor, Legal Practice", stars: 5, text: "I came to them with two years of backlogged records and no idea of my tax position. Within three months, we were fully up to date, compliant and had a clear picture of where the practice stood. Exceptional service." },
-    { name: "Sandile K.", role: "MD, Engineering Firm", stars: 5, text: "What sets Nozulu Mnisi apart is the senior involvement. I'm not dealing with a different junior every time — I'm dealing with people who know my business inside out. That consistency is invaluable." },
-    { name: "Lisa van D.", role: "Owner, Retail Business", stars: 5, text: "Our payroll is complex — different rates, commissions, overtime. They handle it perfectly, every month, on time. The EMP501 this year was stress-free for the first time in years." },
+    { name: "Sandile K.", role: "MD, Engineering Firm", stars: 5, text: "What sets Nozulu Mnisi apart is the senior involvement. I'm not dealing with a different junior every time - I'm dealing with people who know my business inside out. That consistency is invaluable." },
+    { name: "Lisa van D.", role: "Owner, Retail Business", stars: 5, text: "Our payroll is complex - different rates, commissions, overtime. They handle it perfectly, every month, on time. The EMP501 this year was stress-free for the first time in years." },
     { name: "Kabelo M.", role: "Director, Property Company", stars: 5, text: "The advisory work they've done for us has been genuinely transformative. Our cash flow planning is now a strategic tool, not just a report. Highly recommend for any growing business." },
-    { name: "Andrea S.", role: "MD, Professional Services Firm", stars: 5, text: "Responsive, thorough, and they actually explain things. We finally understand our numbers — not just receive them. That clarity has made us better decision-makers." },
+    { name: "Andrea S.", role: "MD, Professional Services Firm", stars: 5, text: "Responsive, thorough, and they actually explain things. We finally understand our numbers - not just receive them. That clarity has made us better decision-makers." },
   ],
   durban: [
     { name: "Lungelo Z.", role: "Owner, Transport Business", stars: 5, text: "The KZN team is excellent. I was sceptical about working with a firm based partly in Gauteng, but the service is seamless. They understand the local business environment and deliver consistently." },
     { name: "Nadia P.", role: "Director, Consulting Firm", stars: 5, text: "Nozulu Mnisi took over our accounting from a firm that was missing deadlines regularly. Within two months, we were fully current and I finally felt confident in our compliance position." },
-    { name: "Bongani D.", role: "MD, Manufacturing Company", stars: 5, text: "Our statutory compliance is now completely taken care of. CIPC returns, UIF, COIDA — all handled without me having to follow up. That peace of mind is worth more than the fee." },
-    { name: "Fahmida A.", role: "Sole Trader, Healthcare Practitioner", stars: 5, text: "As an individual professional, I needed someone who understood my tax situation. They handled my personal income tax, provisional tax and practice accounts — all coordinated seamlessly." },
+    { name: "Bongani D.", role: "MD, Manufacturing Company", stars: 5, text: "Our statutory compliance is now completely taken care of. CIPC returns, UIF, COIDA - all handled without me having to follow up. That peace of mind is worth more than the fee." },
+    { name: "Fahmida A.", role: "Sole Trader, Healthcare Practitioner", stars: 5, text: "As an individual professional, I needed someone who understood my tax situation. They handled my personal income tax, provisional tax and practice accounts - all coordinated seamlessly." },
   ],
 };
 
@@ -52,7 +52,7 @@ export default function ReviewsPage({ navigate }: { navigate: (p: Page) => void 
       `}</style>
       <PageHero
         label="Client Reviews"
-        title={<>What Our <span style={{ color: GOLD }}>Clients Say.</span></>}
+        title={<>What Our <span className="text-white">Clients Say.</span></>}
         subtitle="We measure our success by the confidence, clarity and compliance of the businesses we serve."
       />
 
@@ -139,7 +139,7 @@ export default function ReviewsPage({ navigate }: { navigate: (p: Page) => void 
         <div className="max-w-3xl mx-auto px-5">
           <div
             className="rounded-2xl p-10 text-center relative overflow-hidden"
-            style={{ background: `linear-gradient(135deg, ${BACKGROUND_BLUE} 0%, #1a3a6b 100%)` }}
+            style={{ background: NAVY }}
           >
             <div className="absolute top-0 right-0 w-64 h-64 rounded-full opacity-10" style={{ background: BACKGROUND_GREEN, transform: "translate(30%,-30%)" }} />
             <Quote size={36} className="mx-auto mb-4 opacity-30 text-white" />
@@ -147,7 +147,7 @@ export default function ReviewsPage({ navigate }: { navigate: (p: Page) => void 
             <p className="text-white text-lg leading-relaxed my-6 italic" style={{ fontFamily: "'Montserrat', sans-serif" }}>
               "What sets Nozulu Mnisi apart is that they actually care about outcomes, not just outputs. They don't just file returns - they make sure we understand our position and have a plan."
             </p>
-            <p className="font-black text-sm" style={{ color: GOLD }}>FOUNDER & CEO · Johannesburg</p>
+            <p className="font-black text-sm text-white">FOUNDER & CEO · Johannesburg</p>
           </div>
         </div>
       </section>

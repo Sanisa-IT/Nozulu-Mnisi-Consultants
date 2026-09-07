@@ -23,10 +23,10 @@ const services = [
   {
     num: "02", icon: <Receipt size={28} />, title: "Taxation",
     tagline: "Compliant. Efficient. Defensible.",
-    intro: "Tax compliance is not just about submitting returns — it's about understanding your obligations, managing your exposure and making sure your affairs are structured correctly.",
+    intro: "Tax compliance is not just about submitting returns - it's about understanding your obligations, managing your exposure and making sure your affairs are structured correctly.",
     items: [
       "Income tax (individuals, trusts, companies, close corporations)",
-      "Value Added Tax (VAT) — registration, returns and disputes",
+      "Value Added Tax (VAT) - registration, returns and disputes",
       "Provisional tax calculations and submissions",
       "Payroll tax management (PAYE, SDL, UIF)",
       "Tax Compliance Status (TCS) applications",
@@ -49,12 +49,12 @@ const services = [
       "Leave and benefit administration",
       "New employee onboarding and termination processing",
     ],
-    who: "Businesses with one or more employees — from small teams to organisations with complex payroll structures.",
+    who: "Businesses with one or more employees - from small teams to organisations with complex payroll structures.",
   },
   {
     num: "04", icon: <ShieldCheck size={28} />, title: "Statutory Compliance",
     tagline: "Registered. Current. Protected.",
-    intro: "Statutory compliance covers the full range of regulatory obligations that businesses must maintain — beyond just tax. We manage the registrations, returns and filings that keep you legally current.",
+    intro: "Statutory compliance covers the full range of regulatory obligations that businesses must maintain - beyond just tax. We manage the registrations, returns and filings that keep you legally current.",
     items: [
       "CIPC annual returns and company secretarial",
       "Beneficial ownership registers and submissions",
@@ -68,7 +68,7 @@ const services = [
   {
     num: "05", icon: <Lightbulb size={28} />, title: "Advisory",
     tagline: "Insight that drives decisions.",
-    intro: "Good advisory work connects financial information to the real-world decisions you face. We don't just produce numbers — we help you understand what they mean and what you should do next.",
+    intro: "Good advisory work connects financial information to the real-world decisions you face. We don't just produce numbers - we help you understand what they mean and what you should do next.",
     items: [
       "Budgeting and forecasting",
       "Cash flow planning and monitoring",
@@ -93,7 +93,7 @@ const services = [
       "Internal finance controls and policies",
       "Bank reconciliations and cash management",
     ],
-    who: "Businesses that need structured financial operations — whether as a standalone function or as support for an existing team.",
+    who: "Businesses that need structured financial operations - whether as a standalone function or as support for an existing team.",
   },
 ];
 
@@ -102,8 +102,8 @@ export default function ServicesPage({ navigate }: { navigate: (p: Page) => void
     <div>
       <PageHero
         label="Our Services"
-        title={<>One Firm. Six Connected <span style={{ color: GOLD }}>Service Pillars.</span></>}
-        subtitle="Every service we offer is designed to work together — coordinated by the same senior team, built on the same reliable records."
+        title={<>One Firm. Six Connected <span className="text-white">Service Pillars.</span></>}
+        subtitle="Every service we offer is designed to work together - coordinated by the same senior team, built on the same reliable records."
       />
 
       {/* Connected by design */}

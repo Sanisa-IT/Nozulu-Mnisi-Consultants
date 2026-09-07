@@ -117,7 +117,7 @@ export default function Navbar({
           Let's Work Together
         </button>
 
-        {/* Hamburger — small screens only */}
+        {/* Hamburger - small screens only */}
         <button className="lg:hidden p-2" onClick={() => setOpen(!open)}>
           {open ? <X size={22} color={NAVY} /> : <Menu size={22} color={NAVY} />}
         </button>
