@@ -125,6 +125,48 @@
 	border-color: #004aad !important;
 }
 
+.service-detail-card {
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #d9e1ea;
+	border-radius: 1rem;
+	background: white;
+	box-shadow: 0 8px 22px rgba(16, 42, 67, 0.06);
+	animation: service-reveal 650ms both ease-out;
+	will-change: transform, box-shadow;
+	transition: transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 280ms ease, border-color 280ms ease;
+}
+
+.service-detail-card::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 4px;
+	height: 0;
+	background: #d4a017;
+	transition: height 280ms ease;
+}
+
+.service-detail-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 18px 34px rgba(16, 42, 67, 0.14);
+	border-color: #d4a017;
+}
+
+.service-detail-card:hover::before {
+	height: 100%;
+}
+
+.service-detail-icon {
+	transition: transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1), background-color 280ms ease;
+}
+
+.service-detail-card:hover .service-detail-icon {
+	transform: rotate(-8deg) scale(1.1);
+	background-color: rgba(0, 74, 173, 0.16) !important;
+}
+
 .hero-outline-button {
 	color: white !important;
 	border-color: white !important;
@@ -136,11 +178,16 @@
 		animation: none;
 	}
 	.site-button:hover,
-	.service-card:hover {
+	.service-card:hover,
+	.service-detail-card:hover {
 		animation: none;
 		transform: none;
 		box-shadow: none;
 	}
 	.site-button:hover::after,
-	.service-card::before { animation: none; }
+	.service-card::before,
+	.service-detail-card::before { animation: none; }
+	.service-detail-card {
+		animation: none;
+	}
 }

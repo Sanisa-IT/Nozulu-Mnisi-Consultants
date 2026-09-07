@@ -133,13 +133,13 @@ export default function ServicesPage({ navigate }: { navigate: (p: Page) => void
             <div
               key={s.num}
               id={s.title.toLowerCase().replace(/\s+/g, "-")}
-              className={`grid md:grid-cols-2 gap-12 items-start py-10 ${i > 0 ? "border-t" : ""}`}
-              style={{ borderColor: BORDER }}
+              className="service-detail-card grid md:grid-cols-2 gap-12 items-start p-6 md:p-8"
+              style={{ animationDelay: `${i * 90}ms` }}
             >
               <div className={i % 2 === 1 ? "md:order-2" : ""}>
                 <div className="flex items-center gap-4 mb-5">
-                  <span className="text-3xl font-black" style={{ color: GOLD, fontFamily: "'Roboto', sans-serif" }}>{s.num}</span>
-                  <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: BACKGROUND_BLUE + "0d", color: NAVY }}>
+                  <span className="service-detail-number text-3xl font-black" style={{ color: GOLD, fontFamily: "'Roboto', sans-serif" }}>{s.num}</span>
+                  <div className="service-detail-icon w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: BACKGROUND_BLUE + "0d", color: NAVY }}>
                     {s.icon}
                   </div>
                 </div>

@@ -121,20 +121,20 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
             {services.map((s, i) => (
               <div
                 key={s.title}
-                className="service-card service-card-blue rounded-xl p-6 group cursor-pointer"
-                style={{ animationDelay: `${i * 90}ms` }}
+                className="service-card border rounded-xl p-5 group cursor-pointer"
+                style={{ animationDelay: `${i * 90}ms`, background: "#004aad", borderColor: "#004aad" }}
                 onClick={() => navigate("services")}
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="service-number text-xs font-black tracking-widest" style={{ color: NAVY }}>0{i + 1}</span>
-                  <div className="service-icon w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: "rgba(0,74,173,0.10)", color: NAVY }}>
+                  <span className="service-number text-xs font-black tracking-widest text-white">0{i + 1}</span>
+                  <div className="service-icon w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: "rgba(255,255,255,0.16)", color: "white" }}>
                     {s.icon}
                   </div>
                 </div>
-                <h3 className="font-black text-sm mb-2 group-hover:text-amber-700 transition-colors" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>
+                <h3 className="font-black text-sm mb-2 text-white group-hover:text-white transition-colors" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                   {s.title}
                 </h3>
-                <p className="text-xs text-black leading-relaxed">{s.desc}</p>
+                <p className="text-xs text-white leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>
