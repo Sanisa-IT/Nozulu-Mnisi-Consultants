@@ -19,7 +19,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen" style={{ fontFamily: "'Inter', sans-serif" }}>
+    <div className="min-h-screen" style={{ fontFamily: "'Roboto', sans-serif" }}>
       <Navbar current={page} navigate={navigate} />
 
       {page === "home"         && <HomePage       navigate={navigate} />}

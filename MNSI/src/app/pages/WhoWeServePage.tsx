@@ -95,7 +95,7 @@ export default function WhoWeServePage({ navigate }: { navigate: (p: Page) => vo
                   {s.icon}
                 </div>
                 <SectionLabel>Who We Serve</SectionLabel>
-                <h2 className="text-2xl md:text-3xl font-black mb-4 leading-tight" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>
+                <h2 className="text-2xl md:text-3xl font-black mb-4 leading-tight" style={{ color: NAVY, fontFamily: "'Roboto', sans-serif" }}>
                   {s.title}
                 </h2>
                 <p className="text-black leading-relaxed mb-6 text-sm">{s.desc}</p>

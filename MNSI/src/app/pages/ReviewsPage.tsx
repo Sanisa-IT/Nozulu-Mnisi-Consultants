@@ -66,7 +66,7 @@ export default function ReviewsPage({ navigate }: { navigate: (p: Page) => void 
             { value: "2", label: "Provinces Served" },
           ].map((s) => (
             <div key={s.label} className="text-center">
-              <p className="text-3xl font-black" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>{s.value}</p>
+              <p className="text-3xl font-black" style={{ color: NAVY, fontFamily: "'Roboto', sans-serif" }}>{s.value}</p>
               <p className="text-xs text-black mt-1">{s.label}</p>
             </div>
           ))}
@@ -82,11 +82,11 @@ export default function ReviewsPage({ navigate }: { navigate: (p: Page) => void 
                 <button
                   key={t}
                   onClick={() => setTab(t)}
-                  className="px-7 py-3 text-sm font-black capitalize transition-all"
+                  className="px-7 py-3 text-sm font-semibold capitalize transition-all"
                   style={{
                     background: tab === t ? NAVY : "white",
                     color: tab === t ? "white" : NAVY,
-                    fontFamily: "'Montserrat', sans-serif",
+                    fontFamily: "'Roboto', sans-serif",
                   }}
                 >
                   {t === "gauteng" ? "Gauteng Office" : "Durban Office"}
@@ -144,7 +144,7 @@ export default function ReviewsPage({ navigate }: { navigate: (p: Page) => void 
             <div className="absolute top-0 right-0 w-64 h-64 rounded-full opacity-10" style={{ background: BACKGROUND_GREEN, transform: "translate(30%,-30%)" }} />
             <Quote size={36} className="mx-auto mb-4 opacity-30 text-white" />
             <StarRow count={5} />
-            <p className="text-white text-lg leading-relaxed my-6 italic" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+            <p className="text-white text-lg leading-relaxed my-6 italic" style={{ fontFamily: "'Roboto', sans-serif" }}>
               "What sets Nozulu Mnisi apart is that they actually care about outcomes, not just outputs. They don't just file returns - they make sure we understand our position and have a plan."
             </p>
             <p className="font-black text-sm" style={{ color: GOLD }}>FOUNDER & CEO · Johannesburg</p>

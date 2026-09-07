@@ -39,7 +39,7 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
           <div>
             <h1
               className="text-4xl md:text-5xl lg:text-[3.2rem] font-black leading-[1.1] mb-6 uppercase"
-              style={{ color: "#fff", fontFamily: "'Montserrat', sans-serif" }}
+              style={{ color: "#fff", fontFamily: "'Roboto', sans-serif" }}
             >
               Your Partner in<br />Personal and<br />Business <span style={{ color: GOLD }}>Wellbeing.</span>
             </h1>
@@ -73,7 +73,7 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
                   {p.icon}
                 </div>
                 <div>
-                  <p className="font-black text-sm" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>{p.title}</p>
+                  <p className="font-black text-sm" style={{ color: NAVY, fontFamily: "'Roboto', sans-serif" }}>{p.title}</p>
                   <p className="text-xs text-black mt-0.5">{p.desc}</p>
                 </div>
               </div>
@@ -131,7 +131,7 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
                     {s.icon}
                   </div>
                 </div>
-                <h3 className="font-black text-sm mb-2 group-hover:text-amber-700 transition-colors" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>
+                <h3 className="font-black text-sm mb-2 group-hover:text-amber-700 transition-colors" style={{ color: NAVY, fontFamily: "'Roboto', sans-serif" }}>
                   {s.title}
                 </h3>
                 <p className="text-xs text-black leading-relaxed">{s.desc}</p>
@@ -156,7 +156,7 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
               <div key={s.num} className="flex md:flex-col items-start md:items-stretch gap-4 md:gap-0 flex-1">
                 <div className="border bg-white rounded-xl p-5 flex-1" style={{ borderColor: BORDER }}>
                   <span className="text-xs font-black tracking-widest mb-3 block" style={{ color: GOLD }}>{s.num}</span>
-                  <h4 className="font-black text-sm mb-2" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>{s.title}</h4>
+                  <h4 className="font-black text-sm mb-2" style={{ color: NAVY, fontFamily: "'Roboto', sans-serif" }}>{s.title}</h4>
                   <p className="text-xs text-black leading-relaxed">{s.desc}</p>
                 </div>
                 {i < steps.length - 1 && (
@@ -179,7 +179,7 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
         <div className="relative max-w-7xl mx-auto px-5">
           <div className="text-center mb-12">
             <p className="text-xs font-black tracking-[0.2em] uppercase mb-3 text-white">Why Choose Us</p>
-            <h2 className="text-3xl md:text-4xl font-black text-white" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+            <h2 className="text-3xl md:text-4xl font-black text-white" style={{ fontFamily: "'Roboto', sans-serif" }}>
               The Value We Create
             </h2>
           </div>
@@ -195,7 +195,7 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
               <div key={v.title} className="rounded-xl p-5 flex items-start gap-3" style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)" }}>
                 <CheckCircle size={18} className="shrink-0 mt-0.5 text-white" />
                 <div>
-                  <p className="font-black text-sm text-white mb-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>{v.title}</p>
+                  <p className="font-black text-sm text-white mb-1" style={{ fontFamily: "'Roboto', sans-serif" }}>{v.title}</p>
                   <p className="text-xs text-white leading-relaxed">{v.desc}</p>
                 </div>
               </div>
@@ -204,8 +204,8 @@ export default function HomePage({ navigate }: { navigate: (p: Page) => void }) 
           <div className="text-center mt-10">
             <button
               onClick={() => navigate("contact")}
-              className="font-black px-8 py-3.5 rounded text-white text-sm hover:opacity-90 transition-all border-2"
-              style={{ borderColor: "white", color: "white", fontFamily: "'Montserrat', sans-serif" }}
+              className="font-semibold px-8 py-3.5 rounded text-white text-sm hover:opacity-90 transition-all border-2"
+              style={{ borderColor: "white", color: "white", fontFamily: "'Roboto', sans-serif" }}
             >
               Book a Free Consultation
             </button>

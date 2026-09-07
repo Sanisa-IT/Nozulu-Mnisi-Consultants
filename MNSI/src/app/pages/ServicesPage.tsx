@@ -138,13 +138,13 @@ export default function ServicesPage({ navigate }: { navigate: (p: Page) => void
             >
               <div className={i % 2 === 1 ? "md:order-2" : ""}>
                 <div className="flex items-center gap-4 mb-5">
-                  <span className="text-3xl font-black" style={{ color: GOLD, fontFamily: "'Montserrat', sans-serif" }}>{s.num}</span>
+                  <span className="text-3xl font-black" style={{ color: GOLD, fontFamily: "'Roboto', sans-serif" }}>{s.num}</span>
                   <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: BACKGROUND_BLUE + "0d", color: NAVY }}>
                     {s.icon}
                   </div>
                 </div>
                 <SectionLabel>{s.tagline}</SectionLabel>
-                <h2 className="text-2xl md:text-3xl font-black mb-4" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>
+                <h2 className="text-2xl md:text-3xl font-black mb-4" style={{ color: NAVY, fontFamily: "'Roboto', sans-serif" }}>
                   {s.title}
                 </h2>
                 <p className="text-black leading-relaxed mb-6 text-sm">{s.intro}</p>
