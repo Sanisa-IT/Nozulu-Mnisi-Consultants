@@ -205,13 +205,8 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
       >
         <div className="max-w-7xl mx-auto px-5">
           <div className="text-center mb-12">
-<<<<<<< HEAD
             <p className="text-xs font-black tracking-[0.2em] uppercase mb-3 text-white">Our Story</p>
             <h2 className="text-3xl font-black text-white" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-=======
-            <p className="text-xs font-black tracking-[0.2em] uppercase mb-3" style={{ color: GOLD }}>Our Story</p>
-            <h2 className="text-3xl font-black text-white" style={{ fontFamily: "'Roboto', sans-serif" }}>
->>>>>>> 1dc695a7fef91810484ad5fb05651d965c2994fa
               Where we started. Where we're going.
             </h2>
           </div>
@@ -238,13 +233,8 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
           <div className="text-center mt-10">
             <button
               onClick={() => navigate("journey")}
-<<<<<<< HEAD
               className="font-black px-6 py-3 rounded text-sm border-2 hover:bg-white/10 transition-all"
               style={{ borderColor: "white", color: "white", fontFamily: "'Montserrat', sans-serif" }}
-=======
-              className="font-semibold px-6 py-3 rounded text-sm border-2 hover:bg-white/10 transition-all"
-              style={{ borderColor: GOLD, color: GOLD, fontFamily: "'Roboto', sans-serif" }}
->>>>>>> 1dc695a7fef91810484ad5fb05651d965c2994fa
             >
               View Full Journey
             </button>

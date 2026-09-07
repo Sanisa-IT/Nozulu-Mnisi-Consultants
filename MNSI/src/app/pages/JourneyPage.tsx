@@ -146,13 +146,8 @@ export default function JourneyPage({ navigate }: { navigate: (p: Page) => void 
         style={{ background: NAVY }}
       >
         <div className="relative max-w-3xl mx-auto px-5 text-center">
-<<<<<<< HEAD
           <p className="text-xs font-black tracking-[0.2em] uppercase mb-3 text-white">Be Part of the Journey</p>
           <h2 className="text-3xl font-black text-white mb-5" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-=======
-          <p className="text-xs font-black tracking-[0.2em] uppercase mb-3" style={{ color: GOLD }}>Be Part of the Journey</p>
-          <h2 className="text-3xl font-black text-white mb-5" style={{ fontFamily: "'Roboto', sans-serif" }}>
->>>>>>> 1dc695a7fef91810484ad5fb05651d965c2994fa
             Let's build your financial future together.
           </h2>
           <p className="text-white mb-8 text-sm">

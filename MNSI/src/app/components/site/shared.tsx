@@ -45,11 +45,7 @@ export function Btn({
   onClick?: () => void;
   className?: string;
 }) {
-<<<<<<< HEAD
   const base = "site-button inline-flex items-center gap-2 font-black px-6 py-3 rounded text-sm transition-all hover:opacity-90";
-=======
-  const base = "inline-flex items-center gap-2 font-semibold px-6 py-3 rounded text-sm transition-all hover:opacity-90";
->>>>>>> 1dc695a7fef91810484ad5fb05651d965c2994fa
   const styles = {
     primary: { background: NAVY, color: "#fff" },
     outline: { border: `2px solid ${NAVY}`, color: NAVY, background: "transparent" },
