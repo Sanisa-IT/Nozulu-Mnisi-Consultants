@@ -68,7 +68,7 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
                 className="rounded-xl p-6 text-center border"
                 style={{ borderColor: BORDER, background: LIGHT }}
               >
-                <p className="text-4xl font-black mb-1" style={{ color: GOLD, fontFamily: "'Montserrat', sans-serif" }}>{s.value}</p>
+                <p className="text-4xl font-black mb-1" style={{ color: GOLD, fontFamily: "'Roboto', sans-serif" }}>{s.value}</p>
                 <p className="text-xs text-black font-semibold">{s.label}</p>
               </div>
             ))}
@@ -89,7 +89,7 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4" style={{ background: BACKGROUND_BLUE + "0d", color: NAVY }}>
                   {v.icon}
                 </div>
-                <h3 className="font-black text-sm mb-2" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>{v.title}</h3>
+                <h3 className="font-black text-sm mb-2" style={{ color: NAVY, fontFamily: "'Roboto', sans-serif" }}>{v.title}</h3>
                 <p className="text-xs text-black leading-relaxed">{v.desc}</p>
               </div>
             ))}
@@ -111,9 +111,9 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
                 { num: "04", title: "Support That Can Scale",     desc: "Whether you need recurring monthly support or a specialist project, our structure adapts to your stage of growth." },
               ].map((r) => (
                 <div key={r.num} className="flex gap-5">
-                  <span className="text-2xl font-black shrink-0" style={{ color: GOLD, fontFamily: "'Montserrat', sans-serif" }}>{r.num}</span>
+                  <span className="text-2xl font-black shrink-0" style={{ color: GOLD, fontFamily: "'Roboto', sans-serif" }}>{r.num}</span>
                   <div>
-                    <h4 className="font-black text-sm mb-1.5" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>{r.title}</h4>
+                    <h4 className="font-black text-sm mb-1.5" style={{ color: NAVY, fontFamily: "'Roboto', sans-serif" }}>{r.title}</h4>
                     <p className="text-sm text-black leading-relaxed">{r.desc}</p>
                   </div>
                 </div>
@@ -160,7 +160,7 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
                   <UserCircle size={36} className="text-black" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-black" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>{m.name}</h3>
+                  <h3 className="text-lg font-black" style={{ color: NAVY, fontFamily: "'Roboto', sans-serif" }}>{m.name}</h3>
                   <p className="text-sm font-semibold mb-0.5" style={{ color: GOLD }}>{m.role}</p>
                   <p className="text-xs text-black mb-3">{m.creds}</p>
                   <p className="text-sm text-black leading-relaxed">{m.bio}</p>
@@ -183,7 +183,7 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
             </div>
             <div>
               <SectionLabel>Developing Tomorrow's Professionals</SectionLabel>
-              <h3 className="text-xl font-black mb-3" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>
+              <h3 className="text-xl font-black mb-3" style={{ color: NAVY, fontFamily: "'Roboto', sans-serif" }}>
                 CIBA Approved Training Office
               </h3>
               <p className="text-sm text-black leading-relaxed mb-4">
@@ -205,8 +205,13 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
       >
         <div className="max-w-7xl mx-auto px-5">
           <div className="text-center mb-12">
+<<<<<<< HEAD
             <p className="text-xs font-black tracking-[0.2em] uppercase mb-3 text-white">Our Story</p>
             <h2 className="text-3xl font-black text-white" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+=======
+            <p className="text-xs font-black tracking-[0.2em] uppercase mb-3" style={{ color: GOLD }}>Our Story</p>
+            <h2 className="text-3xl font-black text-white" style={{ fontFamily: "'Roboto', sans-serif" }}>
+>>>>>>> 1dc695a7fef91810484ad5fb05651d965c2994fa
               Where we started. Where we're going.
             </h2>
           </div>
@@ -233,8 +238,13 @@ export default function AboutPage({ navigate }: { navigate: (p: Page) => void })
           <div className="text-center mt-10">
             <button
               onClick={() => navigate("journey")}
+<<<<<<< HEAD
               className="font-black px-6 py-3 rounded text-sm border-2 hover:bg-white/10 transition-all"
               style={{ borderColor: "white", color: "white", fontFamily: "'Montserrat', sans-serif" }}
+=======
+              className="font-semibold px-6 py-3 rounded text-sm border-2 hover:bg-white/10 transition-all"
+              style={{ borderColor: GOLD, color: GOLD, fontFamily: "'Roboto', sans-serif" }}
+>>>>>>> 1dc695a7fef91810484ad5fb05651d965c2994fa
             >
               View Full Journey
             </button>

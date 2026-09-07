@@ -27,7 +27,7 @@ export function SectionHeading({
   return (
     <h2
       className={`text-3xl md:text-4xl font-black leading-tight mb-5 ${center ? "text-center" : ""}`}
-      style={{ color: light ? "#fff" : NAVY, fontFamily: "'Montserrat', sans-serif" }}
+      style={{ color: light ? "#fff" : NAVY, fontFamily: "'Roboto', sans-serif" }}
     >
       {children}
     </h2>
@@ -45,7 +45,11 @@ export function Btn({
   onClick?: () => void;
   className?: string;
 }) {
+<<<<<<< HEAD
   const base = "site-button inline-flex items-center gap-2 font-black px-6 py-3 rounded text-sm transition-all hover:opacity-90";
+=======
+  const base = "inline-flex items-center gap-2 font-semibold px-6 py-3 rounded text-sm transition-all hover:opacity-90";
+>>>>>>> 1dc695a7fef91810484ad5fb05651d965c2994fa
   const styles = {
     primary: { background: NAVY, color: "#fff" },
     outline: { border: `2px solid ${NAVY}`, color: NAVY, background: "transparent" },
@@ -55,7 +59,7 @@ export function Btn({
     <button
       onClick={onClick}
       className={`${base} ${className}`}
-      style={{ fontFamily: "'Montserrat', sans-serif", ...styles[variant] }}
+      style={{ fontFamily: "'Roboto', sans-serif", ...styles[variant] }}
     >
       {children}
     </button>
@@ -86,7 +90,7 @@ export function PageHero({
         </p>
         <h1
           className="text-4xl md:text-5xl font-black text-white leading-tight mb-5"
-          style={{ fontFamily: "'Montserrat', sans-serif" }}
+          style={{ fontFamily: "'Roboto', sans-serif" }}
         >
           {title}
         </h1>

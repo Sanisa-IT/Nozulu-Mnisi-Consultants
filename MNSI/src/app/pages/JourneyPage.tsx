@@ -99,7 +99,7 @@ export default function JourneyPage({ navigate }: { navigate: (p: Page) => void 
                       }}
                     >
                       <div className={`flex items-center gap-2 mb-2 ${i % 2 === 0 ? "md:justify-end" : ""}`}>
-                        <span className="text-sm font-black" style={{ color: GOLD, fontFamily: "'Montserrat', sans-serif" }}>{m.year}</span>
+                        <span className="text-sm font-black" style={{ color: GOLD, fontFamily: "'Roboto', sans-serif" }}>{m.year}</span>
                         <span className="text-xs px-2 py-0.5 rounded-full font-semibold" style={{ background: BACKGROUND_GREEN + "18", color: GOLD }}>{m.label}</span>
                       </div>
                       <p className="text-sm font-bold mb-2" style={{ color: NAVY }}>{m.desc}</p>
@@ -132,7 +132,7 @@ export default function JourneyPage({ navigate }: { navigate: (p: Page) => void 
               { value: "Level 1", label: "B-BBEE Status" },
             ].map((s) => (
               <div key={s.label} className="bg-white border rounded-xl p-6 text-center" style={{ borderColor: BORDER }}>
-                <p className="text-3xl font-black mb-1" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>{s.value}</p>
+                <p className="text-3xl font-black mb-1" style={{ color: NAVY, fontFamily: "'Roboto', sans-serif" }}>{s.value}</p>
                 <p className="text-xs text-black">{s.label}</p>
               </div>
             ))}
@@ -146,8 +146,13 @@ export default function JourneyPage({ navigate }: { navigate: (p: Page) => void 
         style={{ background: NAVY }}
       >
         <div className="relative max-w-3xl mx-auto px-5 text-center">
+<<<<<<< HEAD
           <p className="text-xs font-black tracking-[0.2em] uppercase mb-3 text-white">Be Part of the Journey</p>
           <h2 className="text-3xl font-black text-white mb-5" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+=======
+          <p className="text-xs font-black tracking-[0.2em] uppercase mb-3" style={{ color: GOLD }}>Be Part of the Journey</p>
+          <h2 className="text-3xl font-black text-white mb-5" style={{ fontFamily: "'Roboto', sans-serif" }}>
+>>>>>>> 1dc695a7fef91810484ad5fb05651d965c2994fa
             Let's build your financial future together.
           </h2>
           <p className="text-white mb-8 text-sm">

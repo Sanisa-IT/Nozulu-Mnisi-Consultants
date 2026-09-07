@@ -133,13 +133,13 @@ export default function ContactPage() {
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mb-5" style={{ background: BACKGROUND_GREEN + "18" }}>
                   <CheckCircle size={32} style={{ color: GOLD }} />
                 </div>
-                <h3 className="text-xl font-black mb-2" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>Message Received</h3>
+                <h3 className="text-xl font-black mb-2" style={{ color: NAVY, fontFamily: "'Roboto', sans-serif" }}>Message Received</h3>
                 <p className="text-black text-sm mb-2">Thank you for reaching out. A member of our team will be in touch within one business day.</p>
                 <p className="text-xs text-black">If your matter is urgent, please call us directly on 011 568 7121 (Gauteng) or 031 100 0320 (KZN).</p>
               </div>
             ) : (
               <div className="bg-white border rounded-2xl p-7" style={{ borderColor: BORDER }}>
-                <h3 className="font-black text-lg mb-5" style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}>
+                <h3 className="font-black text-lg mb-5" style={{ color: NAVY, fontFamily: "'Roboto', sans-serif" }}>
                   Tell us about your needs
                 </h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -240,8 +240,8 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full font-black py-3.5 rounded-lg text-white text-sm hover:opacity-90 transition-all flex items-center justify-center gap-2"
-                    style={{ background: NAVY, fontFamily: "'Montserrat', sans-serif" }}
+                    className="w-full font-semibold py-3.5 rounded-lg text-white text-sm hover:opacity-90 transition-all flex items-center justify-center gap-2"
+                    style={{ background: NAVY, fontFamily: "'Roboto', sans-serif" }}
                   >
                     Send Message <ArrowRight size={16} />
                   </button>

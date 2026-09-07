@@ -127,7 +127,7 @@ export default function InsightsPage() {
                 >
                   {featured.category}
                 </span>
-                <p className="text-white font-black text-lg leading-snug" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                  <p className="text-white font-black text-lg leading-snug" style={{ fontFamily: "'Roboto', sans-serif" }}>
                   {featured.title}
                 </p>
               </div>
@@ -177,7 +177,7 @@ export default function InsightsPage() {
                   </div>
                   <h3
                     className="font-black text-sm leading-snug mb-3 group-hover:text-amber-700 transition-colors"
-                    style={{ color: NAVY, fontFamily: "'Montserrat', sans-serif" }}
+                    style={{ color: NAVY, fontFamily: "'Roboto', sans-serif" }}
                   >
                     {a.title}
                   </h3>
@@ -204,7 +204,7 @@ export default function InsightsPage() {
       >
         <div className="relative max-w-xl mx-auto px-5 text-center">
           <p className="text-xs font-black tracking-[0.2em] uppercase mb-3" style={{ color: GOLD }}>Stay Informed</p>
-          <h2 className="text-2xl font-black text-white mb-4" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+          <h2 className="text-2xl font-black text-white mb-4" style={{ fontFamily: "'Roboto', sans-serif" }}>
             Get insights delivered to your inbox.
           </h2>
           <p className="text-white text-sm mb-6">Practical guidance on tax, compliance and financial management - no noise, just value.</p>
@@ -216,7 +216,7 @@ export default function InsightsPage() {
               style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "white" }}
             />
             <button
-              className="font-black px-5 py-3 rounded text-white text-sm hover:opacity-90 transition-all shrink-0"
+              className="font-semibold px-5 py-3 rounded text-white text-sm hover:opacity-90 transition-all shrink-0"
               style={{ background: GOLD }}
             >
               Subscribe

@@ -61,7 +61,7 @@ export default function Navbar({
                     style={{
                       color: isAboutActive ? GOLD : NAVY,
                       background: isAboutActive ? BACKGROUND_GREEN + "12" : "transparent",
-                      fontFamily: "'Montserrat', sans-serif",
+                      fontFamily: "'Roboto', sans-serif",
                     }}
                   >
                     {label}
@@ -79,7 +79,7 @@ export default function Navbar({
                             style={{
                               color: current === childPage ? GOLD : NAVY,
                               background: current === childPage ? BACKGROUND_GREEN + "12" : "transparent",
-                              fontFamily: "'Montserrat', sans-serif",
+                              fontFamily: "'Roboto', sans-serif",
                             }}
                           >
                             {childLabel}
@@ -100,7 +100,7 @@ export default function Navbar({
                 style={{
                   color: current === page ? GOLD : NAVY,
                   background: current === page ? BACKGROUND_GREEN + "12" : "transparent",
-                  fontFamily: "'Montserrat', sans-serif",
+                  fontFamily: "'Roboto', sans-serif",
                 }}
               >
                 {label}
@@ -111,8 +111,8 @@ export default function Navbar({
 
         <button
           onClick={() => go("contact")}
-          className="hidden lg:flex font-black text-sm px-5 py-2.5 rounded text-white hover:opacity-90 transition-all"
-          style={{ background: NAVY, fontFamily: "'Montserrat', sans-serif" }}
+          className="hidden lg:flex font-semibold text-sm px-5 py-2.5 rounded text-white hover:opacity-90 transition-all"
+          style={{ background: NAVY, fontFamily: "'Roboto', sans-serif" }}
         >
           Let's Work Together
         </button>
@@ -181,7 +181,7 @@ export default function Navbar({
           </div>
           <button
             onClick={() => go("contact")}
-            className="w-full font-black text-sm py-3 rounded text-white"
+            className="w-full font-semibold text-sm py-3 rounded text-white"
             style={{ background: NAVY }}
           >
             Let's Work Together
